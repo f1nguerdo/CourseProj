@@ -4,20 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="head">
         <div class="head-left">
-            <span class="Tripma">Tripma</span>
+            <img class="logo" src="Wordmark.png" alt="">
         </div>    
         <div class="head-right">
-            <span>Flights</span>
-            <span>Hotels</span>
-            <span>Packages</span>
-            <span>Sign in</span>
-            <button class="sign-up">Sign up</button>
+            <span class="head-right-span"><a href="">Flights</a></span>
+            <span class="head-right-span"><a href="">Hotels</a></span>
+            <span class="head-right-span"><a href="">Packages</a></span>
+            <span class="head-right-span"><a href="">Sign in</a></span>
+            <button class="purple-button">Sign up</button>
         </div>
 
     </header>
+
+    <main>
+        <section class ="preview">
+            <h1 class="preview-text"> It's more than just a trip</h1>
+            <div class="preview-searchBar">
+                <input list="cities" name="city" placeholder="From where?">
+                <datalist id="cities">
+                  <option value="SFO">
+                  <option value="NRT">
+                  <option value="ATL">
+                <option value="LAX"></option>
+                <option value="STL"></option>
+                <option value="PVG"></option>
+                <option value="MSP"></option>
+                </datalist>
+                <input list="cities" name=" city " placeholder="Where to??"> </input>
+                <input type="date" id="datePicker" placeholder="Depart-Return">
+                    <button onclick="toggleDropdown()" class="dropbtn">1 Adults</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <div class="number-control">
+                            <button onclick="changeValue('value1', -1)">-</button>
+                            <span id="value1" class="number-value">0</span>
+                            <button onclick="changeValue('value1', 1)">+</button>
+                            <span>Adults</span>
+                        </div>
+                        <div class="number-control">
+                            <button onclick="changeValue('value2', -1)">-</button>
+                            <span id="value2" class="number-value">0</span>
+                            <button onclick="changeValue('value2', 1)">+</button>
+                            <span>Minors</span>
+                        </div>
+                    </div>
+                    <button class="purple-button">Search</Search></button>
+                </section>
+                </div>
+               
+    </main>
 </body>
 </html>
