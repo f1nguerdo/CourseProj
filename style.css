@@ -61,6 +61,18 @@ line-height: normal;
     width: 95px;
 }
 
+.purple-button-preview {
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+   
+    height: 48px;
+    width: 95px;
+}
 .purple-button:hover {
     background-color: #4a3db3;
 }
@@ -184,6 +196,111 @@ a{
     align-items: center;
     gap: 10px;
     margin-bottom: 8px;
+}
+
+.deals-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.deals-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.deals-header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.deal-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.deal-card:hover {
+    transform: translateY(-5px);
+}
+
+.deal-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.deal-content {
+    padding: 20px;
+}
+
+.deal-location {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.deal-description {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.deal-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0066cc;
+    margin-top: 15px;
+}
+
+.separator{
+    height:30px;
+}
+
+.deals-header-text{
+    
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 400px) {
+    .deals-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .deal-location {
+        font-size: 1.3rem;
+    }
+    
+    .deal-price {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 1200px) {
+    .preview-searchBar {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5%;
+        width: 90%;
+    }
+
+    .preview-input, .preview-searchBar-passengers, .dropdown {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .purple-button-preview {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 
