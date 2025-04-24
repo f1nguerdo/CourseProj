@@ -48,7 +48,7 @@ font-weight: 400;
 line-height: normal;
 }
 
-.sign-up {
+.purple-button {
     background-color: #6c5ce7;
     color: white;
     border: none;
@@ -61,10 +61,130 @@ line-height: normal;
     width: 95px;
 }
 
-.sign-up:hover {
+.purple-button:hover {
     background-color: #4a3db3;
 }
 a{
     text-decoration: none;
     color:grey;
 }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px;
+            z-index: 1;
+        }
+        
+        .number-control {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .number-value {
+            margin: 0 10px;
+            min-width: 30px;
+            text-align: center;
+        }
+        
+       .button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+      .preview{
+        background-image: url(worldMap.png);
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+      } 
+      
+   /* Основные стили */
+.preview-searchBar {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8%;
+    display: flex;
+    gap:0 ;
+    padding: 8%;
+  }
+  
+
+  
+  
+  .input{
+    display: inline-block;
+  }
+.preview-input{
+
+    height: 48px;
+    padding: 12px 16px;        /* Внутренние отступы */
+    border: none;     /* Граница */
+    border-radius: 4px;         /* Закругленные углы */
+    font-size: 16px;           /* Размер шрифта */
+    color: #333;               /* Цвет текста */
+    background-color: white;   /* Фон */
+    box-shadow: none;         /* Убираем тень по умолчанию */
+    outline: none;       
+    width: 325px;          
+    border:none;}
+    .preview-searchBar-passengers{
+        height: 48px;
+        padding: 12px 16px;        /* Внутренние отступы */
+        border: none;     /* Граница */
+        border-radius: 4px;         /* Закругленные углы */
+        font-size: 16px;           /* Размер шрифта */
+        color: #333;               /* Цвет текста */
+        background-color: white;   /* Фон */
+        box-shadow: none;         /* Убираем тень по умолчанию */
+        outline: none;       
+        width: 325px;          
+        border:none;}
+       .dropdown-content {
+            display: none;
+           
+        }
+        .preview-searchBar-passengers {
+    height: 48px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    background-color: white;
+    width: 325px;
+    cursor: pointer; /* Добавляем курсор-указатель */
+}
+
+.dropdown-content {
+    display: none; /* Скрываем dropdown по умолчанию */
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.number-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+
+    

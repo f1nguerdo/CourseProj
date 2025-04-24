@@ -1,25 +1,39 @@
-
-    function toggleDropdown() {
-        document.getElementById("myDropdown").style.display = 
-            document.getElementById("myDropdown").style.display === "block" ? "none" : "block";
-    }
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownBtn = document.getElementById('passengerDropdownBtn');
+    const dropdown = document.getElementById('passengerDropdown');
     
-    function changeValue(id, delta) {
-        const element = document.getElementById(id);
-        let value = parseInt(element.textContent);
-        value += delta;
-        element.textContent = value;
-    }
+    // Обработчик для кнопки вызова dropdown
+    dropdownBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
     
-    // Закрываем dropdown при клике вне его области
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            const dropdowns = document.getElementsByClassName("dropdown-content");
-            for (let i = 0; i < dropdowns.length; i++) {
-                const openDropdown = dropdowns[i];
-                if (openDropdown.style.display === "block") {
-                    openDropdown.style.display = "none";
-                }
-            }
+    // Обработчики для кнопок +/-
+    document.querySelectorAll('.plus-btn, .minus-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const type = this.dataset.type;
+        const counter = document.getElementById(`${type}-count`);
+        let value = parseInt(counter.textContent);
+        
+        if (this.classList.contains('plus-btn')) {
+          value++;
+        } else {
+          value = Math.max(0, value - 1);
         }
+        
+        counter.textContent = value;
+        updateMainButton();
+      });
+    });
+    
+    // Закрытие dropdown при клике вне его
+    document.addEventListener('click', function() {
+      dropdown.style.display = 'none';
+    });
+    
+    function updateMainButton() {
+      const adults = document.getElementById('adults-count').textContent;
+      dropdownBtn.textContent = `${adults} Adult${adults !== '1' ? 's' : ''}`;
     }
+  });

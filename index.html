@@ -29,7 +29,7 @@
         <section class ="preview">
           <img class="preview-logo" src="Hero Text Gradient.png" alt="">
             <div class="preview-searchBar">
-                <input list="cities" name="city" placeholder="From where?">
+                <input class="preview-input" list="cities" name="city" placeholder="From where?">
                 <datalist id="cities">
                   <option value="SFO">
                   <option value="NRT">
@@ -39,25 +39,31 @@
                 <option value="PVG"></option>
                 <option value="MSP"></option>
                 </datalist>
-                <input list="cities" name=" city " placeholder="Where to??"> </input>
-                <input type="date" id="datePicker" placeholder="Depart-Return">
-                    <button onclick="toggleDropdown()" class="dropbtn">1 Adults</button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <div class="number-control">
-                            <button onclick="changeValue('value1', -1)">-</button>
-                            <span id="value1" class="number-value">0</span>
-                            <button onclick="changeValue('value1', 1)">+</button>
-                            <span>Adults</span>
-                        </div>
-                        <div class="number-control">
-                            <button onclick="changeValue('value2', -1)">-</button>
-                            <span id="value2" class="number-value">0</span>
-                            <button onclick="changeValue('value2', 1)">+</button>
-                            <span>Minors</span>
-                        </div>
+                <input class="preview-input" list="cities" name=" city " placeholder="Where to?"> </input>
+                <input class="preview-input" type="date" id="datePicker" placeholder="Depart">
+                <input class="preview-input" type="date" id="datePicker" placeholder="Return">
+                <button id="passengerDropdownBtn" class="preview-searchBar-passengers dropbtn">
+                    1 Adult
+                </button>
+                
+                
+                
+                  <div id="passengerDropdown" class="dropdown-content" style="display: none;">
+                    <div class="number-control">
+                      <button class="minus-btn" data-type="adults">-</button>
+                      <span id="adults-count">1</span>
+                      <button class="plus-btn" data-type="adults">+</button>
+                      <span>Adults</span>
                     </div>
+                    <div class="number-control">
+                      <button class="minus-btn" data-type="minors">-</button>
+                      <span id="minors-count">0</span>
+                      <button class="plus-btn" data-type="minors">+</button>
+                      <span>Minors</span>
+                    </div>
+                  </div>
                     <button class="purple-button">Search</Search></button>
-                </div>
+                      </div>
                 </section>
               
                
