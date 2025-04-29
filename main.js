@@ -37,3 +37,15 @@ document.addEventListener('DOMContentLoaded', function() {
       dropdownBtn.textContent = `${adults} Adult${adults !== '1' ? 's' : ''}`;
     }
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const burgerBtn = document.getElementById('burgerBtn');
+    const menu = document.getElementById('menu');
+    
+    burgerBtn.addEventListener('click', function() {
+        menu.classList.toggle('active');
+        
+        // Анимация бургер-иконки в крестик
+        this.classList.toggle('open');
+    });
+});

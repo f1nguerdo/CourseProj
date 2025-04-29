@@ -48,6 +48,60 @@ font-weight: 400;
 line-height: normal;
 }
 
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.burger-menu span {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s linear;
+}
+@media (max-width: 767px) {
+    .head-right {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 5;
+    }
+    
+    .head-right.active {
+        transform: translateY(0);
+    }
+    
+    .burger-menu {
+        display: flex;
+    }
+    
+    .head-right-span {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .purple-button {
+        margin-top: 10px;
+    }
+}
 .purple-button {
     background-color: #6c5ce7;
     color: white;
@@ -375,6 +429,58 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
+
+.line{
+    height: 1px;
+    color: grey;
+}
+
+.footer-container {
+    width: 100%;
+    padding: 20px;
+    background-color: #f8f8f8; /* или любой нужный вам цвет */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* или любая другая максимальная ширина */
+    margin: 0 auto;
+    flex-wrap: nowrap; /* запрещаем перенос на новую строку */
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px; /* расстояние между иконками */
+}
+
+.social-icons img {
+    width: 24px; /* размер иконок */
+    height: 24px;
+}
+
+.footer-span {
+    white-space: nowrap; /* запрещаем перенос текста */
+    color: var(--Grey-400, #7C8DB0);
+    text-align: right;
+    font-family: "Nunito Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Для очень маленьких экранов можно добавить небольшой отступ */
+@media (max-width: 480px) {
+    .footer-content {
+        padding: 0 10px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    
+}
 /* Для очень маленьких экранов */
 @media (max-width: 400px) {
     .deals-grid {
@@ -412,6 +518,8 @@ line-height: normal;
     
     width: calc(100%); /* Учитываем компенсацию margin */
 }
+
+
 
 /* Для мобильных устройств - оставляем обычное поведение */
 @media (max-width: 768px) {
