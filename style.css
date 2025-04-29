@@ -306,6 +306,75 @@ line-height: normal;
     font-weight: 700;
     line-height: normal;
 }
+.Reviews-head{
+    text-align: center;
+    color: var(--Grey-600, #6E7491);
+font-family: "Nunito Sans";
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.divider{
+    height: 40px;
+}
+.Reviews{
+margin:5%;
+}
+.revs{
+
+    display: flex;
+    align-items: flex-start;
+    gap: 3%;
+    align-self: stretch;
+
+}
+.Review-author-info{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+align-self: stretch;
+
+}
+.Reviews-review{
+    display: flex;
+    padding: 16px;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1 0 0;
+}
+
+.Review-avatar{
+    border-radius: 48px;
+}
+.Review-author{
+    color: var(--Grey-600, #6E7491);
+/* Header H4 */
+font-family: "Nunito Sans";
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+align-self:stretch;
+}
+.Review-date{
+    color: var(--Grey-600, #6E7491);
+/* Body Large */
+font-family: "Nunito Sans";
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.testimonial-content{
+    color: var(--Grey-900, #27273F);
+/* Body Large */
+font-family: "Nunito Sans";
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
 /* Для очень маленьких экранов */
 @media (max-width: 400px) {
     .deals-grid {
@@ -353,4 +422,30 @@ line-height: normal;
     }
 }
 
+@media (max-width: 768px) {
+    .revs {
+        flex-direction: column;
+        gap: 16px;
+    }
     
+    .Reviews-review {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .Reviews {
+        margin: 5% 3%;
+    }
+    
+    .Reviews-review {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .Review-author-info {
+        align-items: center;
+    }
+}
