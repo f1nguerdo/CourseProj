@@ -40,12 +40,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.addEventListener('DOMContentLoaded', function() {
     const burgerBtn = document.getElementById('burgerBtn');
-    const menu = document.getElementById('menu');
+    const mobileMenu = document.getElementById('mobileMenu');
     
     burgerBtn.addEventListener('click', function() {
-        menu.classList.toggle('active');
+        this.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
         
-        // Анимация бургер-иконки в крестик
-        this.classList.toggle('open');
+        // Блокировка прокрутки страницы
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+    
+    // Закрытие меню при клике на ссылку
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+        link.addEventListener('click', function() {
+            burgerBtn.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
     });
 });

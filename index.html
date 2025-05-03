@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"> defer</script>
     <script src="preloader.js" defer></script>
     <script src="main.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="registration-uthorization.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -19,10 +27,9 @@
         </div>
         <div class="progress-text" id="progressText">0%</div>
     </div>
-
     <header class="head">
         <div class="head-left">
-            <img class="logo" src="Wordmark.png" alt="">
+            <img class="logo" src="img/Wordmark.png" alt="">
         </div>    
         <div class="head-right">
             <span class="head-right-span"><a href="">Flights</a></span>
@@ -48,7 +55,7 @@
 
     <main>
         <section class ="preview">
-          <img class="preview-logo" src="Hero Text Gradient.png" alt="">
+          <img class="preview-logo" src="img/Hero Text Gradient.png" alt="">
             <div class="preview-searchBar">
                 <input class="preview-input" list="cities" name="city" placeholder="From where?">
                 <datalist id="cities">
@@ -98,7 +105,7 @@
                         
                         <div class="deals-grid">
                             <div class="deal-card">
-                                <div class="deal-card-image" style="background-image:url(shanghai-image.jpeg)"></div>
+                                <div class="deal-card-image" style="background-image:url(img/shanghai-image.jpeg)"></div>
                                 <div class="deal-content">
                                     <h2 class="deal-location">The Bund, Shanghai</h2>
                                     <p class="deal-description">China's most international city</p>
@@ -107,7 +114,7 @@
                             </div>
                             
                             <div class="deal-card">
-                                <div class="deal-card-image" style="background-image:url(sydney-image.png)"></div>
+                                <div class="deal-card-image" style="background-image:url(img/sydney-image.png)"></div>
                                 <div class="deal-content">
                                     <h2 class="deal-location">Sydney Opera House, Sydney</h2>
                                     <p class="deal-description">Take a stroll along the famous harbor</p>
@@ -116,7 +123,7 @@
                             </div>
                             
                             <div class="deal-card">
-                                <div class="deal-card-image" style="background-image:url(Kyoto-image.png)"></div>
+                                <div class="deal-card-image" style="background-image:url(img/Kyoto-image.png)"></div>
                                 <div class="deal-content">
                                     <h2 class="deal-location">Kōdajji Temple, Kyoto</h2>
                                     <p class="deal-description">Step back in time in the Gion district</p>
@@ -125,7 +132,7 @@
                             </div>
                             
                             <div class="deal-card">
-                                <div class="deal-card-image" style="background-image: url(Kenya-image.png);"></div>
+                                <div class="deal-card-image" style="background-image: url(img/Kenya-image.png);"></div>
                                 <div class="deal-content">
                                     <h2 class="deal-location">Tsavo East National Park, Kenya</h2>
                                     <p class="deal-description">Named after the Tsavo River, and opened in April 1984, Tsavo East National Park is one of the oldest parks in Kenya. It is located in the semi-arid Taru Desert.</p>
@@ -136,13 +143,36 @@
                     </div>      
                 </section>
                 <div class="divider"></div>
+
+
+                 <!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+    ...
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+
              <section class="Reviews">
 
                 <div class="Reviews-head"> <h3> What Tripma users are saying</h3></div>
                 <div class="divider"></div>
                 <div class="revs">
                     <div class="Reviews-review">
-                        <img src="Chen-avatar.png" alt="Yifei Chen" class="Review-avatar">
+                        <img src="img/Chen-avatar.png" alt="Yifei Chen" class="Review-avatar">
                         <div class="Review-author-info">
                             <div class="Review-author">Yifei Chen</div>
                             <div class="Review-date">Seoul, South Korea | April 2019</div>
@@ -154,7 +184,7 @@
                 </div>
                     
                     <div class="Reviews-review">
-                        <img src="Kaori-avatar.png" alt="Kaori Yamaguchi" class="Review-avatar">
+                        <img src="img/Kaori-avatar.png" alt="Kaori Yamaguchi" class="Review-avatar">
                         <div class="Review-author-info">
                             <div class="Review-author">Kaori Yamaguchi</div>
                             <div class="Review-date">Honolulu, Hawaii | February 2017</div>
@@ -166,7 +196,7 @@
                 </div>
                     
                     <div class="Reviews-review">
-                        <img src="Anthony-avatar.png" alt="Anthony Lewis" class="Review-avatar">
+                        <img src="img/Anthony-avatar.png" alt="Anthony Lewis" class="Review-avatar">
                         <div class="Review-author-info">
                             <div class="Review-author">Anthony Lewis</div>
                             <div class="Review-date">Berlin, Germany | April 2019</div>
@@ -183,12 +213,12 @@
  <footer class="footer-container">
     <div class="footer-content">
         <div class="social-icons">
-            <img src="twitter.png" alt="Twitter">
-            <img src="instagram.png" alt="Instagram">
-            <img src="facebook.png" alt="Facebook">
+            <img src="img/twitter.png" alt="Twitter">
+            <img src="img/instagram.png" alt="Instagram">
+            <img src="img/facebook.png" alt="Facebook">
         </div>
         <span class="footer-span">© 2020 Tripma incorporated</span>
     </div>
 </footer>
 </body>
-</html> 
+</html>
