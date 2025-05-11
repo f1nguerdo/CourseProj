@@ -1,0 +1,181 @@
+{
+  "trips": [
+    {
+      "id": 1,
+      "place": "The Bund",
+      "city": "Shanghai",
+      "description": "China's most international city",
+      "price": 598,
+      "image": "img/shanghai-image.jpeg"
+    },
+    {
+      "id": 2,
+      "place": "Sydney Opera House",
+      "city": "Sydney",
+      "description": "Take a stroll along the famous harbor",
+      "price": 981,
+      "image": "img/sydney-image.png"
+    },
+
+    {
+      "id": 11,
+      "place": "Great Wall of China",
+      "city": "Beijing",
+      "description": "Ancient marvel stretching over mountains",
+      "price": 680,
+      "image": "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "id": 12,
+      "place": "Taj Mahal",
+      "city": "Agra",
+      "description": "Iconic white marble mausoleum",
+      "price": 450,
+      "image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+    },
+    {
+      "id": 13,
+      "place": "Machu Picchu",
+      "city": "Cusco",
+      "description": "Ancient Incan city in the Andes",
+      "price": 720,
+      "image": "https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "id": 14,
+      "place": "Petra",
+      "city": "Ma'an",
+      "description": "Rose-red city carved into cliffs",
+      "price": 620,
+      "image": "https://images.unsplash.com/photo-1516476120009-d5a6c9a26390?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "id": 15,
+      "place": "Northern Lights",
+      "city": "Tromsø",
+      "description": "Dancing auroras in Arctic skies",
+      "price": 1100,
+      "image": "https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80"
+    },
+    {
+      "id": 16,
+      "place": "Venice Canals",
+      "city": "Venice",
+      "description": "Romantic waterways and bridges",
+      "price": 850,
+      "image": "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "id": 17,
+      "place": "Angkor Wat",
+      "city": "Siem Reap",
+      "description": "Largest religious monument in the world",
+      "price": 530,
+      "image": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1529&q=80"
+    },
+    {
+      "id": 18,
+      "place": "Dubai Skyline",
+      "city": "Dubai",
+      "description": "Futuristic city in the desert",
+      "price": 1200,
+      "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "id": 19,
+      "place": "Banff National Park",
+      "city": "Alberta",
+      "description": "Turquoise lakes and Rocky Mountains",
+      "price": 780,
+      "image": "https://images.unsplash.com/photo-1500581276021-a4bbcd0050c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "id": 20,
+      "place": "Bora Bora",
+      "city": "French Polynesia",
+      "description": "Overwater bungalows in paradise",
+      "price": 2500,
+      "image": "https://images.unsplash.com/photo-1560049025-7a9b97b772d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "id": 21,
+      "place": "Acropolis",
+      "city": "Athens",
+      "description": "Ancient citadel overlooking Athens",
+      "price": 590,
+      "image": "https://images.unsplash.com/photo-1671726203454-5d7a5370fd6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "id": 22,
+      "place": "Serengeti Safari",
+      "city": "Tanzania",
+      "description": "Wildlife migration in vast plains",
+      "price": 1800,
+      "image": "https://images.unsplash.com/photo-1608848461950-0fe51dfc41cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "id": 23,
+      "place": "Sagrada Família",
+      "city": "Barcelona",
+      "description": "Gaudí's unfinished masterpiece",
+      "price": 670,
+      "image": "https://images.unsplash.com/photo-1583422409516-2895a77efded?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "id": 24,
+      "place": "Mount Fuji",
+      "city": "Tokyo",
+      "description": "Iconic snow-capped volcano",
+      "price": 880,
+      "image": "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "id": 25,
+      "place": "Pamukkale",
+      "city": "Denizli",
+      "description": "Thermal pools on white terraces",
+      "price": 510,
+      "image": "https://images.unsplash.com/photo-1631016800696-5ea8801b3fc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "id": 26,
+      "place": "Victoria Falls",
+      "city": "Livingstone",
+      "description": "Thundering waterfall on the Zambezi",
+      "price": 740,
+      "image": "https://images.unsplash.com/photo-1602088113235-229c19758e9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1467&q=80"
+    },
+    {
+      "id": 27,
+      "place": "Cappadocia",
+      "city": "Nevşehir",
+      "description": "Hot air balloons over fairy chimneys",
+      "price": 690,
+      "image": "https://images.unsplash.com/photo-1519817650390-64a93db51149?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "id": 28,
+      "place": "Yellowstone",
+      "city": "Wyoming",
+      "description": "Geysers and rainbow hot springs",
+      "price": 820,
+      "image": "https://images.unsplash.com/photo-1581779030762-37a9a4d05e3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "id": 29,
+      "place": "Halong Bay",
+      "city": "Quảng Ninh",
+      "description": "Emerald waters with limestone pillars",
+      "price": 570,
+      "image": "https://images.unsplash.com/photo-1528127269322-539ba94370b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "id": 30,
+      "place": "Niagara Falls",
+      "city": "Ontario",
+      "description": "Powerful waterfalls on the US-Canada border",
+      "price": 650,
+      "image": "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80"
+    }
+  ]
+}
