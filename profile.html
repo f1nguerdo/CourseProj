@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/header-auth.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/translations.js" defer></script>
+    <script src="js/profile.js" defer></script>
+</head>
+<body>
+    <header class="head">
+        <div class="head-left">
+            <img class="logo" src="img/Wordmark.png" alt="">
+        </div>    
+        <div class="head-right">
+            <span class="head-right-span"><a href="index.html">Main</a></span>
+            <span class="head-right-span"><a href="about.html">About us</a></span>
+            <span class="head-right-span"><a href="catalog.html">Flights</a></span>
+            
+            <!-- Для авторизованных пользователей -->
+            <div id="authenticatedUser" style="display: none;">
+                <span class="head-right-span"><a href="#" id="cartLink">Cart</a></span>
+                <span class="head-right-span"><a href="profile.html" id="profileLink">Profile</a></span>
+                <span class="head-right-span"><a href="#" id="logoutLink">Logout</a></span>
+            </div>
+            
+            <select id="languageSelector" aria-label="Select language">
+                <option value="en">EN</option>
+                <option value="ru">RU</option>
+            </select>
+            
+            <!-- Кнопка админ-панели (только для администраторов) -->
+            <div id="adminPanel" style="display: none;">
+                <span class="head-right-span"><a href="admin.html" id="adminLink">Admin Panel</a></span>
+            </div>
+            
+            <!-- Для неавторизованных пользователей -->
+            <div id="unauthenticatedUser">
+                <span class="head-right-span" id="signInLink"><a href="login.html">Sign in</a></span>
+                <button class="purple-button" id="signUpBtn">Sign up</button>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding: 20px; max-width: 800px; margin: 0 auto;">
+        <div class="profile-container">
+            <div style="margin-bottom: 30px;">
+                <h1>User Profile</h1>
+            </div>
+            
+            <div class="profile-info" style="background: #f9f9f9; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                <p><strong>Username:</strong> <span id="profileUsername">Loading...</span></p>
+                <p><strong>Full Name:</strong> <span id="profileFullName">Loading...</span></p>
+                <p><strong>Email:</strong> <span id="profileEmail">Loading...</span></p>
+                <p><strong>Phone:</strong> <span id="profilePhone">Loading...</span></p>
+                <p><strong>Birthdate:</strong> <span id="profileBirthdate">Loading...</span></p>
+            </div>
+            
+            <div style="display: flex; gap: 10px;">
+                <button id="editProfileBtn" class="purple-button">Edit Profile</button>
+                <button onclick="logout()" class="purple-button" style="background: #e74c3c;">Logout</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer-container">
+        <div class="footer-content">
+            <div class="social-icons">
+                <img src="img/twitter.png" alt="Twitter">
+                <img src="img/instagram.png" alt="Instagram">
+                <img src="img/facebook.png" alt="Facebook">
+            </div>
+            <span class="footer-span">© 2020 Tripma incorporated</span>
+        </div>
+    </footer>
+</body>
+</html>

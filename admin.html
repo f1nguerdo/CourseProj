@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Tripma</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/header-auth.js" defer></script>
+    <script src="js/admin.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/translations.js" defer></script>
+    <script src="js/menu.js" defer></script>
+    
+</head>
+<body>
+    <header class="head">
+        <div class="head-left">
+            <img class="logo" src="img/Wordmark.png" alt="Tripma Logo">
+        </div>    
+        <button id="burgerBtn" class="burger-menu" aria-label="Open menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+        <div class="head-right" id="mobileMenu">
+            <span class="head-right-span"><a href="index.html">Main</a></span>
+            <span class="head-right-span"><a href="about.html">About us</a></span>
+            <span class="head-right-span"><a href="catalog.html">Flights</a></span>
+            
+            <!-- Кнопка переключения темы -->
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                <svg class="theme-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="sun-icon" d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M12 1V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M12 21V23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M4.22 4.22L5.64 5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M18.36 18.36L19.78 19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M1 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M21 12H23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M4.22 19.78L5.64 18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="moon-icon" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"/>
+                </svg>
+            </button>
+            
+            <select id="languageSelector" aria-label="Select language">
+                <option value="en">EN</option>
+                <option value="ru">RU</option>
+            </select>
+            
+            <!-- Для авторизованных пользователей -->
+            <div id="authenticatedUser" style="display: none;">
+                <span class="head-right-span"><a href="#" id="cartLink">Cart</a></span>
+                <span class="head-right-span"><a href="profile.html" id="profileLink">Profile</a></span>
+                <span class="head-right-span"><a href="#" id="logoutLink">Logout</a></span>
+            </div>
+            
+            
+            
+            <!-- Для неавторизованных пользователей -->
+            <div id="unauthenticatedUser">
+                <span class="head-right-span" id="signInLink"><a href="login.html">Sign in</a></span>
+                <button class="purple-button" id="signUpBtn">Sign up</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <div class="admin-container">
+            <h1>Admin Panel - Trip Management</h1>
+            
+            <!-- Кнопки управления -->
+            <div class="admin-controls">
+                <button id="addTripBtn" class="admin-btn add-btn">Add New Trip</button>
+                <button id="refreshBtn" class="admin-btn refresh-btn">Refresh List</button>
+            </div>
+            
+            <!-- Форма добавления/редактирования путевки -->
+            <div id="tripForm" class="trip-form" style="display: none;">
+                <h2 id="formTitle">Add New Trip</h2>
+                <form id="tripFormElement">
+                    <input type="hidden" id="tripId" value="">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="place">Place (English):</label>
+                            <input type="text" id="place" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="place_ru">Place (Russian):</label>
+                            <input type="text" id="place_ru" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City (English):</label>
+                            <input type="text" id="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city_ru">City (Russian):</label>
+                            <input type="text" id="city_ru" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="description">Description (English):</label>
+                            <textarea id="description" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="description_ru">Description (Russian):</label>
+                            <textarea id="description_ru" required></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullDescription">Full Description (English):</label>
+                            <textarea id="fullDescription" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="fullDescription_ru">Full Description (Russian):</label>
+                            <textarea id="fullDescription_ru" required></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="price">Price ($):</label>
+                            <input type="number" id="price" min="0" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Duration (English):</label>
+                            <input type="text" id="duration" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="duration_ru">Duration (Russian):</label>
+                            <input type="text" id="duration_ru" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="rating">Rating:</label>
+                            <input type="number" id="rating" min="0" max="5" step="0.1" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="image">Image URL:</label>
+                            <input type="url" id="image" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="admin-btn save-btn">Save Trip</button>
+                        <button type="button" id="cancelBtn" class="admin-btn cancel-btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Список путевок -->
+            <div class="trips-list">
+                <h2>Existing Trips</h2>
+                <div id="tripsContainer" class="trips-container">
+                    <!-- Здесь будут отображаться путевки -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-container">
+        <div class="footer-content">
+            <div class="social-icons">
+                <img src="img/twitter.png" alt="Twitter">
+                <img src="img/instagram.png" alt="Instagram">
+                <img src="img/facebook.png" alt="Facebook">
+            </div>
+            <span class="footer-span">© 2020 Tripma incorporated</span>
+        </div>
+    </footer>
+</body>
+</html>
+

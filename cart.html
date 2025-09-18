@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Tripma</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/header-auth.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/translations.js" defer></script>
+    <script src="js/accessibility.js" defer></script>
+    <script src="js/cart.js" defer></script>
+</head>
+<body>
+    <header class="head">
+        <div class="head-left">
+            <img class="logo" src="img/Wordmark.png" alt="Tripma Logo">
+        </div>    
+        <div class="head-right">
+            <span class="head-right-span"><a href="index.html" data-translate="main">Main</a></span>
+            <span class="head-right-span"><a href="about.html" data-translate="about_us">About us</a></span>
+            <span class="head-right-span"><a href="catalog.html" data-translate="flights">Flights</a></span>
+            
+            <!-- Кнопка переключения темы -->
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                <svg class="theme-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="sun-icon" d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M12 1V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M12 21V23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M4.22 4.22L5.64 5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M18.36 18.36L19.78 19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M1 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M21 12H23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M4.22 19.78L5.64 18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="moon-icon" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"/>
+                </svg>
+            </button>
+            
+            <select id="languageSelector" aria-label="Select language">
+                <option value="en">EN</option>
+                <option value="ru">RU</option>
+            </select>
+            
+            <!-- Для авторизованных пользователей -->
+            <div id="authenticatedUser" style="display: none;">
+                <span class="head-right-span"><a href="cart.html" id="cartLink" data-translate="cart">Cart</a></span>
+                <span class="head-right-span"><a href="profile.html" id="profileLink" data-translate="profile">Profile</a></span>
+                <span class="head-right-span"><a href="#" id="logoutLink" data-translate="logout">Logout</a></span>
+            </div>
+            
+            <!-- Кнопка админ-панели (только для администраторов) -->
+            <div id="adminPanel" style="display: none;">
+                <span class="head-right-span"><a href="admin.html" id="adminLink" data-translate="admin_panel">Admin Panel</a></span>
+            </div>
+            
+            <!-- Для неавторизованных пользователей -->
+            <div id="unauthenticatedUser">
+                <span class="head-right-span" id="signInLink"><a href="login.html" data-translate="sign_in">Sign in</a></span>
+                <button class="purple-button" id="signUpBtn" data-translate="sign_up">Sign up</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="cart-main">
+        <div class="cart-container">
+            <h1 data-translate="shopping_cart">Shopping Cart</h1>
+            
+            <!-- Cart Content -->
+            <div id="cartContent" class="cart-content">
+                <!-- Cart items will be loaded here -->
+            </div>
+            
+            <!-- Cart Summary -->
+            <div id="cartSummary" class="cart-summary" style="display: none;">
+                <div class="summary-content">
+                    <h3 data-translate="total">Total: $<span id="totalAmount">0</span></h3>
+                    <div class="cart-actions">
+                        <button id="clearCartBtn" class="cart-btn clear-btn" data-translate="clear_cart">Clear Cart</button>
+                        <button id="orderAllBtn" class="cart-btn order-btn" data-translate="order_all">Order All</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-translate="order_success">Order Successful!</h2>
+                <button class="close-modal" onclick="closeSuccessModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p data-translate="order_success_message">Your order has been placed successfully! Thank you for your purchase.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn" onclick="closeSuccessModal()" data-translate="close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-container">
+        <div class="footer-content">
+            <div class="social-icons">
+                <img src="img/twitter.png" alt="Twitter">
+                <img src="img/instagram.png" alt="Instagram">
+                <img src="img/facebook.png" alt="Facebook">
+            </div>
+            <span class="footer-span" data-translate="copyright">© 2020 Tripma incorporated</span>
+        </div>
+    </footer>
+</body>
+</html>

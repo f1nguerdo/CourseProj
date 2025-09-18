@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/header-auth.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/translations.js" defer></script>
+    <script src="js/accessibility.js" defer></script>
+    <script src="js/login.js" defer></script>
+</head>
+<body>
+    <header class="head">
+        <div class="head-left">
+            <img class="logo" src="img/Wordmark.png" alt="">
+        </div>    
+        <div class="head-right">
+            <span class="head-right-span"><a href="index.html">Main</a></span>
+            <span class="head-right-span"><a href="about.html">About us</a></span>
+            <span class="head-right-span"><a href="catalog.html">Flights</a></span>
+            
+            <!-- Для авторизованных пользователей -->
+            <div id="authenticatedUser" style="display: none;">
+                <span class="head-right-span"><a href="#" id="cartLink">Cart</a></span>
+                <span class="head-right-span"><a href="profile.html" id="profileLink">Profile</a></span>
+                <span class="head-right-span"><a href="#" id="logoutLink">Logout</a></span>
+            </div>
+            
+            <select id="languageSelector" aria-label="Select language">
+                <option value="en">EN</option>
+                <option value="ru">RU</option>
+            </select>
+            
+            <!-- Кнопка админ-панели (только для администраторов) -->
+            <div id="adminPanel" style="display: none;">
+                <span class="head-right-span"><a href="admin.html" id="adminLink">Admin Panel</a></span>
+            </div>
+            
+            <!-- Для неавторизованных пользователей -->
+            <div id="unauthenticatedUser">
+                <span class="head-right-span" id="signInLink"><a href="login.html">Sign in</a></span>
+                <button class="purple-button" id="signUpBtn">Sign up</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <div>
+                <h2 data-i18n="login.form.title">Log in</h2>
+            </div>
+            <form id="loginForm" class="auth-form">
+                <div class="input-wrapper">
+                    <input class="card-input" type="text" 
+                           data-i18n="[placeholder]login.form.nickname" 
+                           placeholder="Nickname" 
+                           id="loginInput">
+                    <span class="error-message" id="login-error"></span>
+                </div>
+                <div class="input-wrapper">
+                    <input class="card-input" type="password" 
+                           data-i18n="[placeholder]login.form.password" 
+                           placeholder="Password" 
+                           id="passwordInput">
+                    <span class="error-message" id="password-error"></span>
+                </div>
+                <button type="submit" class="check-in-button" id="submit-button" data-i18n="login.form.submit">Log in</button>
+                <h3><a href="registar.html" id="toggle-form" data-i18n="login.form.switchToRegister">Sign up</a></h3>
+            </form>
+        </section>
+    </main>
+    
+    <footer class="footer-container">
+        <div class="footer-content">
+            <div class="social-icons">
+                <img src="img/twitter.png" alt="Twitter">
+                <img src="img/instagram.png" alt="Instagram">
+                <img src="img/facebook.png" alt="Facebook">
+            </div>
+            <span class="footer-span">© 2020 Tripma incorporated</span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="preloader.js" defer></script>
-    <script src="catalog.js" defer></script>
+    <script src="js/preloader.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/processing.js" defer></script>
+    <script src="js/header-auth.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/translations.js" defer></script>
+    <script src="js/menu.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/trips.css">
     <title>Document</title>
 </head>
 <body>
@@ -18,31 +24,91 @@
         <div class="progress-text" id="progressText">0%</div>
     </div>
 
-    <header class="head">
-        <div class="head-left">
-            <img class="logo" src="img/Wordmark.png" alt="">
-        </div>    
-        <div class="head-right">
-            <span class="head-right-span"><a href="index.html">Main</a></span>
-            <span class="head-right-span"><a href="">About us</a></span>
-            <span class="head-right-span"><a href="catalog.html">Flights</a></span>
-            <span class="head-right-span"><a href="">Sign in</a></span>
-            <button class="purple-button">Sign up</button>
-        </div>
-        <button class="burger-menu" id="burgerBtn" area-label="Toggle menu">
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
+     <header class="head">
+    <div class="head-left">
+        <img class="logo" src="img/Wordmark.png" alt="Tripma Logo">
+    </div>    
+    <button id="burgerBtn" class="burger-menu" aria-label="Open menu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+    </button>
+    <div class="head-right" id="mobileMenu">
+        <span class="head-right-span"><a href="index.html">Main</a></span>
+        <span class="head-right-span"><a href="about.html">About us</a></span>
+        <span class="head-right-span"><a href="catalog.html">Flights</a></span>
+        
+        <!-- Кнопка переключения темы -->
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+            <svg class="theme-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="sun-icon" d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="sun-ray" d="M12 1V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="sun-ray" d="M12 21V23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="sun-ray" d="M4.22 4.22L5.64 5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="sun-ray" d="M18.36 18.36L19.78 19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="sun-ray" d="M1 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="sun-ray" d="M21 12H23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="sun-ray" d="M4.22 19.78L5.64 18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="sun-ray" d="M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="moon-icon" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"/>
+            </svg>
         </button>
+        
+        <select id="languageSelector" aria-label="Select language">
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+        </select>
+        
+        <!-- Для авторизованных пользователей -->
+        <div id="authenticatedUser" style="display: none;">
+            <span class="head-right-span"><a href="#" id="cartLink">Cart</a></span>
+            <span class="head-right-span"><a href="profile.html" id="profileLink">Profile</a></span>
+            <span class="head-right-span"><a href="#" id="logoutLink">Logout</a></span>
+        </div>
+        
+        
+        
+        <!-- Для неавторизованных пользователей -->
+        <div id="unauthenticatedUser">
+            <span class="head-right-span" id="signInLink"><a href="login.html">Sign in</a></span>
+            <button class="purple-button" id="signUpBtn">Sign up</button>
+        </div>
+    </div>
+</header>
 
-        <nav class="mobile-menu" id="mobileMenu">
-            <a href="#" class="menu-link">Flights</a>
-            <a href="#" class="menu-link">Hotels</a>
-            <a href="#" class="menu-link">Packages</a>
-            <a href="#" class="menu-link">Sign in</a>
-            <button class="signup-btn">Sign up</button>
-        </nav>
-    </header>
-    <div class="deals-container"></div>
+   <div class="controls">
+    <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search by place or city...">
+    </div>
+    <div class="filter-control">
+        <select id="price-filter">
+            <option value="all">All Prices</option>
+            <option value="0-500">$0 - $500</option>
+            <option value="500-1000">$500 - $1000</option>
+            <option value="1000+">$1000+</option>
+        </select>
+    </div>
+    <div class="sort-control">
+        <select id="sort-by">
+            <option value="id">Sort By</option>
+            <option value="price_asc">Price: Low to High</option>
+            <option value="price_desc">Price: High to Low</option>
+            <option value="place_asc">Name: A to Z</option>
+        </select>
+    </div>
+</div>
+
+<div class="deals-container" id="deals-container"></div>
+    <div id="pagination-container" class="pagination"></div>
+    <footer class="footer-container">
+    <div class="footer-content">
+        <div class="social-icons">
+            <img src="img/twitter.png" alt="Twitter">
+            <img src="img/instagram.png" alt="Instagram">
+            <img src="img/facebook.png" alt="Facebook">
+        </div>
+        <span class="footer-span">© 2020 Tripma incorporated</span>
+    </div>
+</footer>
 </body>
 </html>

@@ -103,6 +103,7 @@ function renderTrips(trips) {
                         <h2 class="deal-location">${trip.place}, ${trip.city}</h2>
                         <p class="deal-description">${trip.description}</p>
                         <div class="deal-price">$${trip.price}</div>
+                        <button class="add-to-cart-btn" data-trip-id="${trip.id}">Add to Cart</button>
                     </div>
                 </div>
             `).join('')}
@@ -120,6 +121,32 @@ function renderTrips(trips) {
         });
     });
 
+    // Добавляем обработчики для кнопок "Add to Cart"
+    document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+            e.stopPropagation(); // Предотвращаем переход на страницу деталей
+            
+            const tripId = btn.dataset.tripId;
+            try {
+                const response = await fetch(`${API_URL}/${tripId}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const trip = await response.json();
+                
+                // Добавляем в корзину
+                addToCart(trip);
+                
+                // Показываем уведомление
+                showAddToCartNotification(trip.place);
+                
+            } catch (error) {
+                console.error('Error adding to cart:', error);
+                alert('Error adding trip to cart. Please try again.');
+            }
+        });
+    });
+
 
     // Добавляем обработчики ошибок изображений
     document.querySelectorAll('.deal-card-image').forEach(imgDiv => {
@@ -130,6 +157,108 @@ function renderTrips(trips) {
             imgDiv.querySelector('.image-error-text').style.display = 'block';
         };
     });
+}
+
+// Функции для работы с корзиной
+function addToCart(trip) {
+    const cartItems = getCartItems();
+    
+    // Проверяем, не добавлена ли уже эта путевка
+    const existingItem = cartItems.find(item => item.id === trip.id);
+    if (existingItem) {
+        alert('This trip is already in your cart!');
+        return;
+    }
+    
+    cartItems.push(trip);
+    saveCartItems(cartItems);
+    updateCartCount();
+}
+
+function getCartItems() {
+    try {
+        const cartData = localStorage.getItem('cart');
+        return cartData ? JSON.parse(cartData) : [];
+    } catch (error) {
+        console.error('Error loading cart items:', error);
+        return [];
+    }
+}
+
+function saveCartItems(items) {
+    try {
+        localStorage.setItem('cart', JSON.stringify(items));
+    } catch (error) {
+        console.error('Error saving cart items:', error);
+    }
+}
+
+function updateCartCount() {
+    const cartItems = getCartItems();
+    const cartLink = document.getElementById('cartLink');
+    if (cartLink) {
+        if (cartItems.length > 0) {
+            cartLink.innerHTML = `Cart (${cartItems.length})`;
+        } else {
+            cartLink.innerHTML = 'Cart';
+        }
+    }
+}
+
+function showAddToCartNotification(tripName) {
+    // Создаем уведомление
+    const notification = document.createElement('div');
+    notification.className = 'add-to-cart-notification';
+    notification.innerHTML = `
+        <div class="notification-content">
+            <span>✅ Added "${tripName}" to cart!</span>
+        </div>
+    `;
+    
+    // Стили для уведомления
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #28a745;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        z-index: 10000;
+        animation: slideInRight 0.3s ease;
+    `;
+    
+    // Добавляем анимацию
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+    
+    document.body.appendChild(notification);
+    
+    // Удаляем уведомление через 3 секунды
+    setTimeout(() => {
+        notification.style.animation = 'slideInRight 0.3s ease reverse';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+            if (style.parentNode) {
+                style.parentNode.removeChild(style);
+            }
+        }, 300);
+    }, 3000);
 }
 
 // Отрисовка пагинации

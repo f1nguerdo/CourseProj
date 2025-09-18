@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="css/registration-style.css">
+    <link rel="stylesheet" href="style.css">
+     <script src="js/register.js" defer ></script>
+     <script src="js/main.js"></script>
+     <script src="js/header-auth.js" defer></script>
+  
+</head>
+<body>
+    <header class="head">
+        <div class="head-left">
+            <img class="logo" src="img/Wordmark.png" alt="">
+        </div>    
+        <div class="head-right">
+            <span class="head-right-span"><a href="index.html">Main</a></span>
+            <span class="head-right-span"><a href="about.html">About us</a></span>
+            <span class="head-right-span"><a href="catalog.html">Flights</a></span>
+            
+            <!-- Для авторизованных пользователей -->
+            <div id="authenticatedUser" style="display: none;">
+                <span class="head-right-span"><a href="#" id="cartLink">Cart</a></span>
+                <span class="head-right-span"><a href="profile.html" id="profileLink">Profile</a></span>
+                <span class="head-right-span"><a href="#" id="logoutLink">Logout</a></span>
+            </div>
+            
+            <!-- Кнопка админ-панели (только для администраторов) -->
+            <div id="adminPanel" style="display: none;">
+                <span class="head-right-span"><a href="admin.html" id="adminLink">Admin Panel</a></span>
+            </div>
+            
+            <!-- Для неавторизованных пользователей -->
+            <div id="unauthenticatedUser">
+                <span class="head-right-span" id="signInLink"><a href="login.html">Sign in</a></span>
+                <button class="purple-button" id="signUpBtn">Sign up</button>
+            </div>
+        </div>
+    </header>
+
+  <div class="container">
+        <h1>Регистрация</h1>
+        <form id="registrationForm">
+            <!-- Телефон -->
+            <div class="form-group">
+                <label for="phone" class="required">Номер телефона (РБ)</label>
+                <input type="tel" id="phone" placeholder="+375 (XX) XXX-XX-XX" required>
+                <div class="error-message" id="phone-error">Введите корректный номер телефона РБ</div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email" class="required">Email</label>
+                <input type="email" id="email" placeholder="example@mail.com" required>
+                <div class="error-message" id="email-error">Введите корректный email</div>
+            </div>
+
+            <!-- Дата рождения -->
+            <div class="form-group">
+                <label for="birthdate" class="required">Дата рождения</label>
+                <input type="date" id="birthdate" required>
+                <div class="error-message" id="birthdate-error">Вам должно быть не менее 16 лет</div>
+            </div>
+
+            <!-- Пароль -->
+            <div class="form-group">
+                <label class="required">Способ задания пароля</label>
+                <div class="password-options">
+                    <input type="radio" id="manual-password" name="password-type" value="manual" checked>
+                    <label for="manual-password">Ввести вручную</label>
+                    <input type="radio" id="auto-password" name="password-type" value="auto">
+                    <label for="auto-password">Сгенерировать автоматически</label>
+                </div>
+
+                <div id="manual-password-section">
+                    <label for="password" class="required">Пароль</label>
+                    <input type="password" id="password" placeholder="Не менее 8 символов">
+                    <div class="password-strength">
+                        <div class="strength-bar" id="password-strength"></div>
+                    </div>
+                    <div class="error-message" id="password-error">
+                        Пароль должен содержать: 8-20 символов, заглавную и строчную буквы, цифру и спецсимвол
+                    </div>
+
+                    <label for="confirm-password" class="required">Подтвердите пароль</label>
+                    <input type="password" id="confirm-password" placeholder="Повторите пароль">
+                    <div class="error-message" id="confirm-password-error">Пароли не совпадают</div>
+                </div>
+
+                <div id="auto-password-section" class="hidden">
+                    <label for="generated-password">Сгенерированный пароль</label>
+                    <input type="text" id="generated-password" readonly>
+                    <button type="button" id="generate-password-btn">Сгенерировать новый</button>
+                </div>
+            </div>
+
+            <!-- ФИО -->
+            <div class="form-group">
+                <label for="lastname" class="required">Фамилия</label>
+                <input type="text" id="lastname" required>
+                <div class="error-message" id="lastname-error">Введите фамилию</div>
+            </div>
+
+            <div class="form-group">
+                <label for="firstname" class="required">Имя</label>
+                <input type="text" id="firstname" required>
+                <div class="error-message" id="firstname-error">Введите имя</div>
+            </div>
+
+            <div class="form-group">
+                <label for="middlename">Отчество</label>
+                <input type="text" id="middlename">
+            </div>
+
+            <!-- Никнейм -->
+            <div class="form-group">
+                <label for="nickname" class="required">Никнейм</label>
+                <div class="nickname-generator">
+                    <input type="text" id="nickname" required>
+                    <button type="button" id="generate-nickname-btn">Сгенерировать</button>
+                </div>
+                <div class="error-message" id="nickname-error">Введите никнейм</div>
+                <div id="nickname-attempts" class="hidden">Осталось попыток генерации: <span id="attempts-count">5</span></div>
+            </div>
+
+            <!-- Соглашение -->
+            <div class="agreement">
+                <input type="checkbox" id="agreement" required>
+                <label for="agreement" class="required">Я прочитал и согласен с <a href="#" id="agreement-link">пользовательским соглашением</a></label>
+                <div class="error-message" id="agreement-error">Необходимо принять соглашение</div>
+            </div>
+
+            <!-- Кнопка отправки -->
+            <button type="submit" class="submit-btn" id="submit-btn">Зарегистрироваться</button>
+             <div class="login-signature">
+            Если уже есть аккаунт, <a href="login.html">войдите</a>
+        </div>
+        </form>
+    </div>
+
+    <footer class="footer-container">
+        <div class="footer-content">
+            <div class="social-icons">
+                <img src="img/twitter.png" alt="Twitter">
+                <img src="img/instagram.png" alt="Instagram">
+                <img src="img/facebook.png" alt="Facebook">
+            </div>
+            <span class="footer-span">© 2020 Tripma incorporated</span>
+        </div>
+    </footer>
+</body>
+</html>

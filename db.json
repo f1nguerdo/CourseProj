@@ -3,179 +3,956 @@
     {
       "id": 1,
       "place": "The Bund",
+      "place_ru": "Набережная Вайтань",
       "city": "Shanghai",
+      "city_ru": "Шанхай",
       "description": "China's most international city",
+      "description_ru": "Самый интернациональный город Китая",
+      "fullDescription": "Explore the stunning waterfront area of Shanghai with its colonial-era buildings and modern skyscrapers. The Bund offers breathtaking views of Pudong's futuristic skyline across the Huangpu River.",
+      "fullDescription_ru": "Исследуйте потрясающую набережную Шанхая с колониальными зданиями и современными небоскребами. С Вайтань открывается захватывающий вид на футуристический силуэт Пудуна через реку Хуанпу.",
       "price": 598,
-      "image": "img/shanghai-image.jpeg"
+      "duration": "5 days",
+      "duration_ru": "5 дней",
+      "rating": 4.7,
+      "highlights": [
+        "Evening river cruise",
+        "Historic architecture tour",
+        "Local food tasting"
+      ],
+      "highlights_ru": [
+        "Вечерняя речная прогулка",
+        "Тур по исторической архитектуре",
+        "Дегустация местной кухни"
+      ],
+      "image": "img/shanghai-image.jpeg",
+      "gallery": [
+        "img/shanghai-image.jpeg",
+        "https://images.unsplash.com/photo-1508804185872-d7badad00f7d",
+        "https://images.unsplash.com/photo-1538428494232-9c3d3f343749"
+      ]
     },
     {
       "id": 2,
       "place": "Sydney Opera House",
+      "place_ru": "Сиднейский оперный театр",
       "city": "Sydney",
+      "city_ru": "Сидней",
       "description": "Take a stroll along the famous harbor",
+      "description_ru": "Прогулка по знаменитой гавани",
+      "fullDescription": "Visit the iconic Sydney Opera House, a masterpiece of 20th century architecture. Enjoy performances, backstage tours, and stunning harbor views from this UNESCO World Heritage Site.",
+      "fullDescription_ru": "Посетите знаменитый Сиднейский оперный театр - шедевр архитектуры XX века. Насладитесь представлениями, экскурсиями за кулисы и потрясающими видами на гавань с этого объекта Всемирного наследия ЮНЕСКО.",
       "price": 981,
-      "image": "img/sydney-image.png"
+      "duration": "7 days",
+      "duration_ru": "7 дней",
+      "rating": 4.9,
+      "highlights": [
+        "Guided tour of Opera House",
+        "Harbor bridge climb",
+        "Bondi Beach visit"
+      ],
+      "highlights_ru": [
+        "Экскурсия по оперному театру",
+        "Подъем на мост Харбор-Бридж",
+        "Посещение пляжа Бондай"
+      ],
+      "image": "img/sydney-image.png",
+      "gallery": [
+        "img/sydney-image.png",
+        "https://images.unsplash.com/photo-1523428096881-5bd79d043006",
+        "https://images.unsplash.com/photo-1528072164453-f4e8ef0d475a"
+      ]
     },
-
     {
       "id": 11,
       "place": "Great Wall of China",
+      "place_ru": "Великая Китайская стена",
       "city": "Beijing",
+      "city_ru": "Пекин",
       "description": "Ancient marvel stretching over mountains",
+      "description_ru": "Древнее чудо, протянувшееся через горы",
+      "fullDescription": "Walk along one of the New Seven Wonders of the World. The Great Wall stretches over 13,000 miles across northern China, offering breathtaking views and a glimpse into China's imperial history.",
+      "fullDescription_ru": "Прогуляйтесь по одному из новых семи чудес света. Великая Китайская стена протянулась на 21 000 км по северному Китаю, предлагая захватывающие виды и возможность прикоснуться к имперской истории Китая.",
       "price": 680,
-      "image": "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "duration": "4 days",
+      "duration_ru": "4 дня",
+      "rating": 4.8,
+      "highlights": [
+        "Mutianyu section visit",
+        "Cable car ride",
+        "Toboggan slide down"
+      ],
+      "highlights_ru": [
+        "Посещение участка Мутянью",
+        "Поездка на канатной дороге",
+        "Спуск на тобоггане"
+      ],
+      "image": "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b",
+        "https://images.unsplash.com/photo-1528164344705-47542687000d",
+        "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e"
+      ]
     },
     {
       "id": 12,
       "place": "Taj Mahal",
+      "place_ru": "Тадж-Махал",
       "city": "Agra",
+      "city_ru": "Агра",
       "description": "Iconic white marble mausoleum",
+      "description_ru": "Знаменитый беломраморный мавзолей",
+      "fullDescription": "Visit the jewel of Muslim art in India, built by Emperor Shah Jahan in memory of his wife. The Taj Mahal's stunning symmetry and intricate details make it one of the most beautiful buildings in the world.",
+      "fullDescription_ru": "Посетите жемчужину мусульманского искусства в Индии, построенную императором Шах-Джаханом в память о жене. Потрясающая симметрия и замысловатые детали делают Тадж-Махал одним из самых красивых зданий в мире.",
       "price": 450,
-      "image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+      "duration": "3 days",
+      "duration_ru": "3 дня",
+      "rating": 4.7,
+      "highlights": [
+        "Sunrise viewing",
+        "Guided historical tour",
+        "Agra Fort visit"
+      ],
+      "highlights_ru": [
+        "Наблюдение восхода солнца",
+        "Экскурсия с гидом",
+        "Посещение форта Агра"
+      ],
+      "image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1564507592333-c60657eea523",
+        "https://images.unsplash.com/photo-1587137305398-7a689f5a1a8c",
+        "https://images.unsplash.com/photo-1524492412937-b28074a5d7da"
+      ]
     },
     {
       "id": 13,
       "place": "Machu Picchu",
+      "place_ru": "Мачу-Пикчу",
       "city": "Cusco",
+      "city_ru": "Куско",
       "description": "Ancient Incan city in the Andes",
+      "description_ru": "Древний город инков в Андах",
+      "fullDescription": "Discover the lost city of the Incas, hidden high in the Andes mountains. This 15th-century citadel offers stunning architecture and panoramic views of the surrounding valleys.",
+      "fullDescription_ru": "Откройте для себя затерянный город инков, скрытый высоко в Андах. Эта крепость XV века предлагает потрясающую архитектуру и панорамные виды на окружающие долины.",
       "price": 720,
-      "image": "https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "duration": "6 days",
+      "duration_ru": "6 дней",
+      "rating": 4.9,
+      "highlights": [
+        "Sun Gate hike",
+        "Inca Trail option",
+        "Guided ruins tour"
+      ],
+      "highlights_ru": [
+        "Поход к Воротам Солнца",
+        "Вариант маршрута по Тропе Инков",
+        "Экскурсия по руинам с гидом"
+      ],
+      "image": "https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1526392060635-9d6019884377",
+        "https://images.unsplash.com/photo-1575408264798-b50b252663e6",
+        "https://images.unsplash.com/photo-1530180930285-edabfa957dd6"
+      ]
     },
     {
       "id": 14,
       "place": "Petra",
+      "place_ru": "Петра",
       "city": "Ma'an",
+      "city_ru": "Маан",
       "description": "Rose-red city carved into cliffs",
+      "description_ru": "Розово-красный город, высеченный в скалах",
+      "fullDescription": "Explore the ancient Nabatean city carved directly into vibrant red sandstone cliffs. Petra's most famous structure, Al-Khazneh (The Treasury), appears dramatically at the end of the Siq canyon.",
+      "fullDescription_ru": "Исследуйте древний набатейский город, высеченный прямо в ярких красных песчаных скалах. Самое известное сооружение Петры - Аль-Хазне (Сокровищница) - эффектно появляется в конце ущелья Сик.",
       "price": 620,
-      "image": "https://images.unsplash.com/photo-1516476120009-d5a6c9a26390?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "duration": "5 days",
+      "duration_ru": "5 дней",
+      "rating": 4.6,
+      "highlights": [
+        "Treasury viewpoint",
+        "Monastery hike",
+        "Night-time candlelit tour"
+      ],
+      "highlights_ru": [
+        "Вид на Сокровищницу",
+        "Поход к Монастырю",
+        "Ночная экскурсия при свечах"
+      ],
+      "image": "https://images.unsplash.com/photo-1516476120009-d5a6c9a26390?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1516476120009-d5a6c9a26390",
+        "https://images.unsplash.com/photo-1553991562-9f24b119bf51",
+        "https://images.unsplash.com/photo-1584882003299-fb294e23f0d1"
+      ]
     },
     {
       "id": 15,
       "place": "Northern Lights",
+      "place_ru": "Северное сияние",
       "city": "Tromsø",
+      "city_ru": "Тромсё",
       "description": "Dancing auroras in Arctic skies",
+      "description_ru": "Танцующие полярные сияния в арктическом небе",
+      "fullDescription": "Witness the magical aurora borealis in Norway's Arctic Circle. Our tour includes expert guides who know the best viewing spots, warm accommodations, and optional winter activities like dog sledding.",
+      "fullDescription_ru": "Увидьте волшебное северное сияние за Полярным кругом в Норвегии. Наш тур включает гидов-экспертов, которые знают лучшие места для наблюдения, уютное жилье и дополнительные зимние развлечения, такие как катание на собачьих упряжках.",
       "price": 1100,
-      "image": "https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80"
+      "duration": "4 days",
+      "duration_ru": "4 дня",
+      "rating": 4.8,
+      "highlights": [
+        "Aurora chasing tours",
+        "Samí cultural experience",
+        "Fjord cruise"
+      ],
+      "highlights_ru": [
+        "Туры для охоты за сиянием",
+        "Знакомство с культурой саами",
+        "Круиз по фьордам"
+      ],
+      "image": "https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1607346256330-dee7af15f7c5",
+        "https://images.unsplash.com/photo-1609081219090-a6d81d3085bf",
+        "https://images.unsplash.com/photo-1579033462043-0f11a7862f7d"
+      ]
     },
     {
       "id": 16,
       "place": "Venice Canals",
+      "place_ru": "Венецианские каналы",
       "city": "Venice",
+      "city_ru": "Венеция",
       "description": "Romantic waterways and bridges",
+      "description_ru": "Романтические водные пути и мосты",
+      "fullDescription": "Experience the magic of Venice with gondola rides through its iconic canals. Wander through narrow alleyways, discover hidden squares, and admire architecture that hasn't changed for centuries.",
+      "fullDescription_ru": "Почувствуйте магию Венеции, прокатившись на гондоле по ее знаменитым каналам. Побродите по узким улочкам, откройте для себя скрытые площади и полюбуйтесь архитектурой, которая не менялась веками.",
       "price": 850,
-      "image": "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "duration": "5 days",
+      "duration_ru": "5 дней",
+      "rating": 4.7,
+      "highlights": [
+        "Gondola ride",
+        "St. Mark's Basilica",
+        "Murano glassblowing"
+      ],
+      "highlights_ru": [
+        "Прогулка на гондоле",
+        "Собор Святого Марка",
+        "Демонстрация стеклодувов на Мурано"
+      ],
+      "image": "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1514890547357-a9ee288728e0",
+        "https://images.unsplash.com/photo-1533779283484-8ad4940aa3a8",
+        "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9"
+      ]
     },
     {
       "id": 17,
       "place": "Angkor Wat",
+      "place_ru": "Ангкор-Ват",
       "city": "Siem Reap",
+      "city_ru": "Сиемреап",
       "description": "Largest religious monument in the world",
+      "description_ru": "Самый большой религиозный памятник в мире",
+      "fullDescription": "Explore the magnificent temple complex of Angkor Wat, the heart of the ancient Khmer empire. Sunrise over the main temple is an unforgettable experience, with the towers reflected in the surrounding moat.",
+      "fullDescription_ru": "Исследуйте великолепный храмовый комплекс Ангкор-Ват, сердце древней Кхмерской империи. Восход солнца над главным храмом - незабываемое зрелище, когда башни отражаются в окружающем рву.",
       "price": 530,
-      "image": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1529&q=80"
+      "duration": "4 days",
+      "duration_ru": "4 дня",
+      "rating": 4.7,
+      "highlights": [
+        "Sunrise at Angkor Wat",
+        "Ta Prohm jungle temple",
+        "Bayon's smiling faces"
+      ],
+      "highlights_ru": [
+        "Восход в Ангкор-Вате",
+        "Храм Та Пром в джунглях",
+        "Улыбающиеся лица Байона"
+      ],
+      "image": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1529&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a",
+        "https://images.unsplash.com/photo-1566438480900-0609be27a4be",
+        "https://images.unsplash.com/photo-1528181304800-259b08848526"
+      ]
     },
     {
       "id": 18,
       "place": "Dubai Skyline",
+      "place_ru": "Дубайский силуэт",
       "city": "Dubai",
+      "city_ru": "Дубай",
       "description": "Futuristic city in the desert",
+      "description_ru": "Футуристический город в пустыне",
+      "fullDescription": "Experience the ultramodern architecture of Dubai, from the world's tallest building Burj Khalifa to the palm-shaped artificial islands. Enjoy luxury shopping, desert safaris, and vibrant nightlife.",
+      "fullDescription_ru": "Познакомьтесь с ультрасовременной архитектурой Дубая - от самого высокого здания в мире Бурдж-Халифа до искусственных островов в форме пальмы. Насладитесь роскошным шопингом, сафари в пустыне и оживленной ночной жизнью.",
       "price": 1200,
-      "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "duration": "5 days",
+      "duration_ru": "5 дней",
+      "rating": 4.6,
+      "highlights": [
+        "Burj Khalifa observation deck",
+        "Desert dune bashing",
+        "Gold Souk visit"
+      ],
+      "highlights_ru": [
+        "Смотровая площадка Бурдж-Халифа",
+        "Гонки по дюнам в пустыне",
+        "Посещение Золотого рынка"
+      ],
+      "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512453979798-5ea266f8880c",
+        "https://images.unsplash.com/photo-1503917988258-f87a78e3c995",
+        "https://images.unsplash.com/photo-1503174971373-b1f69850bced"
+      ]
     },
     {
       "id": 19,
       "place": "Banff National Park",
+      "place_ru": "Национальный парк Банф",
       "city": "Alberta",
+      "city_ru": "Альберта",
       "description": "Turquoise lakes and Rocky Mountains",
+      "description_ru": "Бирюзовые озера и Скалистые горы",
+      "fullDescription": "Discover the stunning Canadian Rockies in Banff National Park. Hike to emerald lakes, spot wildlife, and relax in natural hot springs surrounded by breathtaking mountain scenery.",
+      "fullDescription_ru": "Откройте для себя потрясающие Канадские Скалистые горы в национальном парке Банф. Совершите поход к изумрудным озерам, понаблюдайте за дикой природой и расслабьтесь в природных горячих источниках среди захватывающих горных пейзажей.",
       "price": 780,
-      "image": "https://images.unsplash.com/photo-1500581276021-a4bbcd0050c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "duration": "7 days",
+      "duration_ru": "7 дней",
+      "rating": 4.9,
+      "highlights": [
+        "Lake Louise visit",
+        "Wildlife viewing",
+        "Hot springs experience"
+      ],
+      "highlights_ru": [
+        "Посещение озера Луиза",
+        "Наблюдение за дикой природой",
+        "Отдых в горячих источниках"
+      ],
+      "image": "https://images.unsplash.com/photo-1500581276021-a4bbcd0050c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1500581276021-a4bbcd0050c5",
+        "https://images.unsplash.com/photo-1503614472-8c93d56e92ce",
+        "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf"
+      ]
     },
     {
-      "id": 20,
       "place": "Bora Bora",
+      "place_ru": "Бора-Бора",
       "city": "French Polynesia",
+      "city_ru": "Французская Полинезия",
       "description": "Overwater bungalows in paradise",
+      "description_ru": "Бунгало над водой в раю",
+      "fullDescription": "Experience ultimate luxury in Bora Bora's famous overwater bungalows. Swim in crystal-clear lagoons, snorkel with tropical fish, and relax on pristine white-sand beaches in this South Pacific paradise.",
+      "fullDescription_ru": "Испытайте высшую роскошь в знаменитых бунгало над водой на Бора-Бора. Плавайте в кристально чистых лагунах, ныряйте с маской среди тропических рыб и отдыхайте на нетронутых пляжах с белым песком в этом раю южной части Тихого океана.",
       "price": 2500,
-      "image": "https://images.unsplash.com/photo-1560049025-7a9b97b772d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "duration": "10 days",
+      "duration_ru": "10 дней",
+      "rating": 4.9,
+      "image": "https://images.unsplash.com/photo-1560049025-7a9b97b772d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "highlights": [
+        "Guided tour",
+        "Local food tasting",
+        "Cultural experience"
+      ],
+      "highlights_ru": [
+        "Экскурсия с гидом",
+        "Дегустация местной кухни",
+        "Культурный опыт"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1560049025-7a9b97b772d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      ],
+      "id": 20
     },
     {
       "id": 21,
       "place": "Acropolis",
+      "place_ru": "Акрополь",
       "city": "Athens",
+      "city_ru": "Афины",
       "description": "Ancient citadel overlooking Athens",
+      "description_ru": "Древняя цитадель с видом на Афины",
+      "fullDescription": "Visit the iconic Acropolis of Athens, the most complete ancient Greek monumental complex still in existence. The Parthenon temple dominates this hilltop site that has stood for over 2,500 years.",
+      "fullDescription_ru": "Посетите знаменитый афинский Акрополь - наиболее сохранившийся древнегреческий монументальный комплекс. Храм Парфенон доминирует на этом холме, который существует уже более 2500 лет.",
       "price": 590,
-      "image": "https://images.unsplash.com/photo-1671726203454-5d7a5370fd6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "duration": "4 days",
+      "duration_ru": "4 дня",
+      "rating": 4.7,
+      "highlights": [
+        "Parthenon visit",
+        "Acropolis Museum",
+        "Ancient Agora"
+      ],
+      "highlights_ru": [
+        "Посещение Парфенона",
+        "Музей Акрополя",
+        "Древняя Агора"
+      ],
+      "image": "https://images.unsplash.com/photo-1671726203454-5d7a5370fd6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1671726203454-5d7a5370fd6f",
+        "https://images.unsplash.com/photo-1551632811-561732d1e306",
+        "https://images.unsplash.com/photo-1605152276897-4f618f831968"
+      ]
     },
     {
       "id": 22,
       "place": "Serengeti Safari",
+      "place_ru": "Сафари в Серенгети",
       "city": "Tanzania",
+      "city_ru": "Танзания",
       "description": "Wildlife migration in vast plains",
+      "description_ru": "Миграция диких животных на бескрайних равнинах",
+      "fullDescription": "Witness the Great Migration in Serengeti National Park, where millions of wildebeest and zebras traverse the plains. Enjoy game drives to see the Big Five in their natural habitat.",
+      "fullDescription_ru": "Станьте свидетелем Великой миграции в национальном парке Серенгети, где миллионы антилоп гну и зебр пересекают равнины. Наслаждайтесь сафари, чтобы увидеть Большую пятерку в их естественной среде обитания.",
       "price": 1800,
-      "image": "https://images.unsplash.com/photo-1608848461950-0fe51dfc41cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "duration": "8 days",
+      "duration_ru": "8 дней",
+      "rating": 4.9,
+      "highlights": [
+        "Great Migration viewing",
+        "Big Five safari",
+        "Balloon ride option"
+      ],
+      "highlights_ru": [
+        "Наблюдение за Великой миграцией",
+        "Сафари за Большой пятеркой",
+        "Возможность полета на воздушном шаре"
+      ],
+      "image": "https://images.unsplash.com/photo-1608848461950-0fe51dfc41cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1608848461950-0fe51dfc41cb",
+        "https://images.unsplash.com/photo-1523438885200-e635ba2c371e",
+        "https://images.unsplash.com/photo-1509316785289-025f5b846b35"
+      ]
     },
     {
       "id": 23,
       "place": "Sagrada Família",
+      "place_ru": "Саграда Фамилия",
       "city": "Barcelona",
+      "city_ru": "Барселона",
       "description": "Gaudí's unfinished masterpiece",
+      "description_ru": "Незаконченный шедевр Гауди",
+      "fullDescription": "Visit Antoni Gaudí's extraordinary basilica that has been under construction since 1882. The Sagrada Família combines Gothic and Art Nouveau forms in a unique architectural vision that's still evolving today.",
+      "fullDescription_ru": "Посетите необыкновенную базилику Антонио Гауди, строительство которой продолжается с 1882 года. Саграда Фамилия сочетает готические формы и модерн в уникальной архитектурной концепции, которая продолжает развиваться и сегодня.",
       "price": 670,
-      "image": "https://images.unsplash.com/photo-1583422409516-2895a77efded?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "duration": "5 days",
+      "duration_ru": "5 дней",
+      "rating": 4.7,
+      "highlights": [
+        "Tower climb",
+        "Nativity facade",
+        "Gaudí House Museum"
+      ],
+      "highlights_ru": [
+        "Подъем на башню",
+        "Фасад Рождества",
+        "Музей дома Гауди"
+      ],
+      "image": "https://images.unsplash.com/photo-1583422409516-2895a77efded?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1583422409516-2895a77efded",
+        "https://images.unsplash.com/photo-1562886889-6f97e8e6d74b",
+        "https://images.unsplash.com/photo-1562887250-9a5a0723c5b9"
+      ]
     },
     {
       "id": 24,
       "place": "Mount Fuji",
+      "place_ru": "Гора Фудзи",
       "city": "Tokyo",
+      "city_ru": "Токио",
       "description": "Iconic snow-capped volcano",
+      "description_ru": "Знаменитый заснеженный вулкан",
+      "fullDescription": "View Japan's most famous landmark, the perfectly symmetrical Mount Fuji. Visit the Fuji Five Lakes region for stunning views, hot springs, and outdoor activities with the mountain as your backdrop.",
+      "fullDescription_ru": "Увидьте самую известную достопримечательность Японии - идеально симметричную гору Фудзи. Посетите регион Пяти озер Фудзи, где вас ждут потрясающие виды, горячие источники и активный отдых на фоне горы.",
       "price": 880,
-      "image": "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "duration": "6 days",
+      "duration_ru": "6 дней",
+      "rating": 4.7,
+      "highlights": [
+        "Lake Kawaguchi views",
+        "Fuji-Q Highland",
+        "Onsen experience"
+      ],
+      "highlights_ru": [
+        "Вид на озеро Кавагути",
+        "Парк развлечений Фудзи-Кью Хайленд",
+        "Опыт посещения онсэна"
+      ],
+      "image": "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1589308078059-be1415eab4c3",
+        "https://images.unsplash.com/photo-1492571350019-22de08371fd3",
+        "https://images.unsplash.com/photo-1542051841857-5f90071e7989"
+      ]
     },
     {
       "id": 25,
-      "place": "Pamukkale",
-      "city": "Denizli",
-      "description": "Thermal pools on white terraces",
-      "price": 510,
-      "image": "https://images.unsplash.com/photo-1631016800696-5ea8801b3fc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "place": "Eiffel Tower",
+      "place_ru": "Эйфелева башня",
+      "city": "Paris",
+      "city_ru": "Париж",
+      "description": "Iconic iron lattice tower",
+      "description_ru": "Знаменитая железная башня",
+      "fullDescription": "Experience the symbol of Paris, the Eiffel Tower, with breathtaking views from its observation decks. Enjoy a Seine River cruise and explore the charming streets of Montmartre.",
+      "fullDescription_ru": "Познакомьтесь с символом Парижа — Эйфелевой башней, наслаждайтесь захватывающими видами с её смотровых площадок. Совершите круиз по Сене и исследуйте очаровательные улочки Монмартра.",
+      "price": 750,
+      "duration": "4 days",
+      "duration_ru": "4 дня",
+      "rating": 4.8,
+      "highlights": [
+        "Summit view",
+        "Seine River cruise",
+        "Montmartre walking tour"
+      ],
+      "highlights_ru": [
+        "Вид с вершины",
+        "Круиз по Сене",
+        "Пешеходная экскурсия по Монмартру"
+      ],
+      "image": "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f",
+        "https://images.unsplash.com/photo-1502602898657-2d1f56b02e13",
+        "https://images.unsplash.com/photo-1543349689-9a4d426bee8e"
+      ]
     },
     {
       "id": 26,
-      "place": "Victoria Falls",
-      "city": "Livingstone",
-      "description": "Thundering waterfall on the Zambezi",
-      "price": 740,
-      "image": "https://images.unsplash.com/photo-1602088113235-229c19758e9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1467&q=80"
+      "place": "Colosseum",
+      "place_ru": "Колизей",
+      "city": "Rome",
+      "city_ru": "Рим",
+      "description": "Ancient Roman amphitheater",
+      "description_ru": "Древнеримский амфитеатр",
+      "fullDescription": "Step into history at the Colosseum, Rome’s iconic gladiatorial arena. Explore the Roman Forum and savor authentic Italian cuisine in the vibrant Trastevere district.",
+      "fullDescription_ru": "Погрузитесь в историю в Колизее, культовой арене для гладиаторских боёв в Риме. Исследуйте Римский форум и насладитесь настоящей итальянской кухней в оживлённом районе Трастевере.",
+      "price": 680,
+      "duration": "5 days",
+      "duration_ru": "5 дней",
+      "rating": 4.7,
+      "highlights": [
+        "Colosseum guided tour",
+        "Roman Forum exploration",
+        "Trastevere food tasting"
+      ],
+      "highlights_ru": [
+        "Экскурсия по Колизею",
+        "Исследование Римского форума",
+        "Дегустация еды в Трастевере"
+      ],
+      "image": "https://images.unsplash.com/photo-1552832230-c5457b1949c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1552832230-c5457b1949c7",
+        "https://images.unsplash.com/photo-1519167758481-83f1af1b1980",
+        "https://images.unsplash.com/photo-1531572759880-d390d2a1c8f1"
+      ]
     },
     {
       "id": 27,
-      "place": "Cappadocia",
-      "city": "Nevşehir",
-      "description": "Hot air balloons over fairy chimneys",
-      "price": 690,
-      "image": "https://images.unsplash.com/photo-1519817650390-64a93db51149?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "place": "Santorini Caldera",
+      "place_ru": "Кальдера Санторини",
+      "city": "Santorini",
+      "city_ru": "Санторини",
+      "description": "Whitewashed villages and blue domes",
+      "description_ru": "Белоснежные деревни и синие купола",
+      "fullDescription": "Discover the breathtaking beauty of Santorini’s caldera, with its iconic whitewashed buildings and stunning sunsets. Explore Oia, swim in volcanic beaches, and savor local wines.",
+      "fullDescription_ru": "Откройте захватывающую красоту кальдеры Санторини с её культовыми белоснежными зданиями и потрясающими закатами. Исследуйте Ойю, искупайтесь на вулканических пляжах и насладитесь местными винами.",
+      "price": 950,
+      "duration": "6 days",
+      "duration_ru": "6 дней",
+      "rating": 4.9,
+      "highlights": [
+        "Oia sunset views",
+        "Volcanic beach swim",
+        "Wine tasting tour"
+      ],
+      "highlights_ru": [
+        "Закаты в Ойе",
+        "Купание на вулканическом пляже",
+        "Тур с дегустацией вин"
+      ],
+      "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff",
+        "https://images.unsplash.com/photo-1507272930720-8c8f4a577df9",
+        "https://images.unsplash.com/photo-1533105079780-1a066b3ae222"
+      ]
     },
     {
       "id": 28,
-      "place": "Yellowstone",
-      "city": "Wyoming",
-      "description": "Geysers and rainbow hot springs",
-      "price": 820,
-      "image": "https://images.unsplash.com/photo-1581779030762-37a9a4d05e3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "place": "Pyramids of Giza",
+      "place_ru": "Пирамиды Гизы",
+      "city": "Cairo",
+      "city_ru": "Каир",
+      "description": "Ancient wonders of the world",
+      "description_ru": "Древние чудеса света",
+      "fullDescription": "Marvel at the Pyramids of Giza, the last surviving wonder of the ancient world. Visit the Great Sphinx and explore the Egyptian Museum’s treasures in Cairo.",
+      "fullDescription_ru": "Полюбуйтесь пирамидами Гизы, последним сохранившимся чудом древнего мира. Посетите Великого Сфинкса и исследуйте сокровища Египетского музея в Каире.",
+      "price": 700,
+      "duration": "5 days",
+      "duration_ru": "5 дней",
+      "rating": 4.8,
+      "highlights": [
+        "Great Pyramid tour",
+        "Sphinx photo stop",
+        "Egyptian Museum visit"
+      ],
+      "highlights_ru": [
+        "Экскурсия по Великой пирамиде",
+        "Фотостоп у Сфинкса",
+        "Посещение Египетского музея"
+      ],
+      "image": "https://images.unsplash.com/photo-1544550581-1c5e91c3f3e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1544550581-1c5e91c3f3e4",
+        "https://images.unsplash.com/photo-1579446568247-06e7e9b0df5b",
+        "https://images.unsplash.com/photo-1542384557-8a5b1a775784"
+      ]
     },
     {
       "id": 29,
-      "place": "Halong Bay",
-      "city": "Quảng Ninh",
-      "description": "Emerald waters with limestone pillars",
-      "price": 570,
-      "image": "https://images.unsplash.com/photo-1528127269322-539ba94370b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "place": "Amazon Rainforest",
+      "place_ru": "Амазонский тропический лес",
+      "city": "Manaus",
+      "city_ru": "Манаус",
+      "description": "World’s largest tropical rainforest",
+      "description_ru": "Самый большой тропический лес в мире",
+      "fullDescription": "Embark on an adventure in the Amazon Rainforest, home to unparalleled biodiversity. Navigate rivers, spot exotic wildlife, and stay in eco-lodges deep in the jungle.",
+      "fullDescription_ru": "Отправьтесь в приключение в Амазонский тропический лес, дом уникального биоразнообразия. Плавайте по рекам, наблюдайте за экзотическими животными и живите в эко-лоджах в глубине джунглей.",
+      "price": 1300,
+      "duration": "7 days",
+      "duration_ru": "7 дней",
+      "rating": 4.7,
+      "highlights": [
+        "Jungle river cruise",
+        "Wildlife spotting",
+        "Indigenous village visit"
+      ],
+      "highlights_ru": [
+        "Круиз по рекам джунглей",
+        "Наблюдение за дикой природой",
+        "Посещение деревни коренных народов"
+      ],
+      "image": "https://images.unsplash.com/photo-1605723517503-3cadb806d4e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1605723517503-3cadb806d4e6",
+        "https://images.unsplash.com/photo-1595950653106-6c9ebd18f8f8",
+        "https://images.unsplash.com/photo-1616941161522-6e0fb0e0f7bf"
+      ]
     },
     {
       "id": 30,
-      "place": "Niagara Falls",
-      "city": "Ontario",
-      "description": "Powerful waterfalls on the US-Canada border",
-      "price": 650,
-      "image": "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80"
+      "place": "Marrakech Medina",
+      "place_ru": "Медина Марракеша",
+      "city": "Marrakech",
+      "city_ru": "Марракеш",
+      "description": "Vibrant souks and historic palaces",
+      "description_ru": "Яркие базары и исторические дворцы",
+      "fullDescription": "Immerse yourself in the bustling Medina of Marrakech, a UNESCO World Heritage Site. Wander through colorful souks, visit the Bahia Palace, and relax in traditional riads.",
+      "fullDescription_ru": "Погрузитесь в бурлящую Медину Марракеша, объект Всемирного наследия ЮНЕСКО. Бродите по ярким базарам, посетите дворец Бахия и отдохните в традиционных риадах.",
+      "price": 620,
+      "duration": "5 days",
+      "duration_ru": "5 дней",
+      "rating": 4.6,
+      "highlights": [
+        "Jemaa el-Fnaa square",
+        "Bahia Palace tour",
+        "Souk shopping"
+      ],
+      "highlights_ru": [
+        "Площадь Джемаа-эль-Фна",
+        "Экскурсия по дворцу Бахия",
+        "Шопинг на базаре"
+      ],
+      "image": "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b",
+        "https://images.unsplash.com/photo-1573323601146-c009e3649968",
+        "https://images.unsplash.com/photo-1549819897-11101e0db51f"
+      ]
+    },
+    {
+      "id": 31,
+      "place": "Reykjavik & Golden Circle",
+      "place_ru": "Рейкьявик и Золотое кольцо",
+      "city": "Reykjavik",
+      "city_ru": "Рейкьявик",
+      "description": "Geysers, waterfalls, and hot springs",
+      "description_ru": "Гейзеры, водопады и горячие источники",
+      "fullDescription": "Explore Iceland’s Golden Circle, including Thingvellir National Park, Geysir hot springs, and Gullfoss waterfall. Relax in the Blue Lagoon and discover Reykjavik’s vibrant culture.",
+      "fullDescription_ru": "Исследуйте Золотое кольцо Исландии, включая национальный парк Тингвеллир, горячие источники Гейсир и водопад Гюдльфосс. Расслабьтесь в Голубой лагуне и откройте для себя яркую культуру Рейкьявика.",
+      "price": 1100,
+      "duration": "6 days",
+      "duration_ru": "6 дней",
+      "rating": 4.8,
+      "highlights": [
+        "Gullfoss waterfall",
+        "Blue Lagoon spa",
+        "Reykjavik city tour"
+      ],
+      "highlights_ru": [
+        "Водопад Гюдльфосс",
+        "Спа в Голубой лагуне",
+        "Тур по Рейкьявику"
+      ],
+      "image": "https://images.unsplash.com/photo-1505236858219-8359eb29e859?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1505236858219-8359eb29e859",
+        "https://images.unsplash.com/photo-1501436513145-30f24e19fcc8",
+        "https://images.unsplash.com/photo-1512505312300-7ce0e6a9032b"
+      ]
+    },
+    {
+      "id": 32,
+      "place": "Cape Town & Table Mountain",
+      "place_ru": "Кейптаун и Столовая гора",
+      "city": "Cape Town",
+      "city_ru": "Кейптаун",
+      "description": "Stunning coastal city and flat-topped mountain",
+      "description_ru": "Потрясающий прибрежный город и гора с плоской вершиной",
+      "fullDescription": "Discover Cape Town’s natural beauty with a cable car ride up Table Mountain. Explore the Cape Peninsula, visit penguins at Boulders Beach, and enjoy the vibrant V&A Waterfront.",
+      "fullDescription_ru": "Откройте природную красоту Кейптауна с поездкой на канатной дороге на Столовую гору. Исследуйте полуостров Кейп, посетите пингвинов на пляже Боулдерс и насладитесь оживлённой набережной V&A.",
+      "price": 850,
+      "duration": "6 days",
+      "duration_ru": "6 дней",
+      "rating": 4.7,
+      "highlights": [
+        "Table Mountain cable car",
+        "Boulders Beach penguins",
+        "Cape Point tour"
+      ],
+      "highlights_ru": [
+        "Канатная дорога на Столовую гору",
+        "Пингвины на пляже Боулдерс",
+        "Тур на мыс Кейп-Пойнт"
+      ],
+      "image": "https://images.unsplash.com/photo-1583417319070-4a69db577897?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1583417319070-4a69db577897",
+        "https://images.unsplash.com/photo-1547039996-7c1f49a07ca9",
+        "https://images.unsplash.com/photo-1516026450295-bd8f78171f89"
+      ]
+    },
+    {
+      "id": 33,
+      "place": "Kyoto Temples",
+      "place_ru": "Храмы Киото",
+      "city": "Kyoto",
+      "city_ru": "Киото",
+      "description": "Ancient temples and serene gardens",
+      "description_ru": "Древние храмы и умиротворённые сады",
+      "fullDescription": "Immerse yourself in Kyoto’s rich history with visits to iconic temples like Kinkaku-ji and Fushimi Inari’s thousand torii gates. Stroll through bamboo groves and enjoy traditional tea ceremonies.",
+      "fullDescription_ru": "Погрузитесь в богатую историю Киото, посетив знаменитые храмы, такие как Кинкаку-дзи и тысячу ворот тории Фусими Инари. Прогуляйтесь по бамбуковым рощам и насладитесь традиционной чайной церемонией.",
+      "price": 900,
+      "duration": "6 days",
+      "duration_ru": "6 дней",
+      "rating": 4.8,
+      "highlights": [
+        "Fushimi Inari gates",
+        "Kinkaku-ji Golden Pavilion",
+        "Arashiyama bamboo forest"
+      ],
+      "highlights_ru": [
+        "Ворота Фусими Инари",
+        "Золотой павильон Кинкаку-дзи",
+        "Бамбуковый лес Арасияма"
+      ],
+      "image": "https://images.unsplash.com/photo-1542051841857-5f90071e7989?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1542051841857-5f90071e7989",
+        "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e",
+        "https://images.unsplash.com/photo-1525186402429-b4d6b38dc28d"
+      ]
+    },
+    {
+      "id": 34,
+      "place": "Patagonia Glaciers",
+      "place_ru": "Ледники Патагонии",
+      "city": "El Calafate",
+      "city_ru": "Эль-Калафате",
+      "description": "Dramatic ice fields and rugged peaks",
+      "description_ru": "Драматичные ледяные поля и суровые вершины",
+      "fullDescription": "Explore the awe-inspiring glaciers of Patagonia, including Perito Moreno. Trek through Los Glaciares National Park and cruise past towering icebergs in this pristine wilderness.",
+      "fullDescription_ru": "Исследуйте впечатляющие ледники Патагонии, включая Перито Морено. Пройдитесь по национальному парку Лос-Гласиарес и отправьтесь в круиз мимо огромных айсбергов в этой первозданной дикой природе.",
+      "price": 1400,
+      "duration": "8 days",
+      "duration_ru": "8 дней",
+      "rating": 4.9,
+      "highlights": [
+        "Perito Moreno Glacier trek",
+        "Iceberg boat tour",
+        "Fitz Roy viewpoint"
+      ],
+      "highlights_ru": [
+        "Поход по леднику Перито Морено",
+        "Лодочный тур к айсбергам",
+        "Смотровая площадка Фицрой"
+      ],
+      "image": "https://images.unsplash.com/photo-1516834474-48c0abc2a902?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1516834474-48c0abc2a902",
+        "https://images.unsplash.com/photo-1545167622-3a6ac756afa4",
+        "https://images.unsplash.com/photo-1602018489860-7ab01283f7f5"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "phone": "+375291234567",
+      "email": "ivan.petrov@example.com",
+      "birthdate": "1995-03-15",
+      "password": "Secure123!Pass",
+      "lastname": "Петров",
+      "firstname": "Иван",
+      "middlename": "Александрович",
+      "nickname": "CoolWolf789",
+      "agreement": true,
+      "role": "user",
+      "id": 1
+    },
+    {
+      "phone": "+375339876543",
+      "email": "anna.smirnova@example.com",
+      "birthdate": "2000-07-22",
+      "password": "Happy2023#Life",
+      "lastname": "Смирнова",
+      "firstname": "Анна",
+      "middlename": "",
+      "nickname": "WiseEagle321",
+      "agreement": true,
+      "role": "user",
+      "id": 2
+    },
+    {
+      "phone": "+375251234567",
+      "email": "dmitry.kozlov@example.com",
+      "birthdate": "1992-11-08",
+      "password": "StrongPass456!",
+      "lastname": "Козлов",
+      "firstname": "Дмитрий",
+      "middlename": "Владимирович",
+      "nickname": "BraveTiger555",
+      "agreement": true,
+      "role": "user",
+      "id": 3
+    },
+    {
+      "phone": "+375441234567",
+      "email": "elena.volkova@example.com",
+      "birthdate": "1988-05-14",
+      "password": "GentleCat789@",
+      "lastname": "Волкова",
+      "firstname": "Елена",
+      "middlename": "Сергеевна",
+      "nickname": "KindFox123",
+      "agreement": true,
+      "role": "user",
+      "id": 4
+    },
+    {
+      "phone": "+375331234567",
+      "email": "alexey.morozov@example.com",
+      "birthdate": "1997-12-03",
+      "password": "SmartBear2024#",
+      "lastname": "Морозов",
+      "firstname": "Алексей",
+      "middlename": "Игоревич",
+      "nickname": "FunnyLion456",
+      "agreement": true,
+      "role": "user",
+      "id": 5
+    },
+    {
+      "phone": "+375291234568",
+      "email": "maria.novikova@example.com",
+      "birthdate": "1994-09-18",
+      "password": "WiseDog789!",
+      "lastname": "Новикова",
+      "firstname": "Мария",
+      "middlename": "Андреевна",
+      "nickname": "HappyBear321",
+      "agreement": true,
+      "role": "user",
+      "id": 6
+    },
+    {
+      "phone": "+375251234568",
+      "email": "sergey.ivanov@example.com",
+      "birthdate": "1991-01-25",
+      "password": "CoolWolf999@",
+      "lastname": "Иванов",
+      "firstname": "Сергей",
+      "middlename": "Петрович",
+      "nickname": "BraveEagle777",
+      "agreement": true,
+      "role": "user",
+      "id": 7
+    },
+    {
+      "phone": "+375441234568",
+      "email": "olga.sidorova@example.com",
+      "birthdate": "1996-06-12",
+      "password": "GentleTiger123!",
+      "lastname": "Сидорова",
+      "firstname": "Ольга",
+      "middlename": "Николаевна",
+      "nickname": "KindCat555",
+      "agreement": true,
+      "role": "user",
+      "id": 8
+    },
+    {
+      "phone": "+375331234568",
+      "email": "vladimir.popov@example.com",
+      "birthdate": "1989-04-30",
+      "password": "SmartFox456#",
+      "lastname": "Попов",
+      "firstname": "Владимир",
+      "middlename": "Александрович",
+      "nickname": "FunnyDog789",
+      "agreement": true,
+      "role": "user",
+      "id": 9
+    },
+    {
+      "phone": "+375291234569",
+      "email": "tatyana.kuznetsova@example.com",
+      "birthdate": "1993-08-07",
+      "password": "WiseLion2024!",
+      "lastname": "Кузнецова",
+      "firstname": "Татьяна",
+      "middlename": "Владимировна",
+      "nickname": "HappyTiger123",
+      "agreement": true,
+      "role": "user",
+      "id": 10
+    },
+    {
+      "phone": "+375251234569",
+      "email": "andrey.lebedev@example.com",
+      "birthdate": "1990-02-19",
+      "password": "CoolBear456@",
+      "lastname": "Лебедев",
+      "firstname": "Андрей",
+      "middlename": "Сергеевич",
+      "nickname": "BraveCat789",
+      "agreement": true,
+      "role": "user",
+      "id": 11
+    },
+    {
+      "nickname": "admin",
+      "password": "admen",
+      "role": "admin"
     }
   ]
 }

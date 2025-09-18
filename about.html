@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <script src="js/preloader.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/header-auth.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/translations.js" defer></script>
+    <script src="js/menu.js" defer></script>
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+      <div class="preloader">
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="progress-text" id="progressText">0%</div>
+    </div>
+ <header class="head">
+    <div class="head-left">
+        <img class="logo" src="img/Wordmark.png" alt="Tripma Logo">
+    </div>    
+    <button id="burgerBtn" class="burger-menu" aria-label="Open menu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+    </button>
+    <div class="head-right" id="mobileMenu">
+        <span class="head-right-span"><a href="index.html">Main</a></span>
+        <span class="head-right-span"><a href="about.html">About us</a></span>
+        <span class="head-right-span"><a href="catalog.html">Flights</a></span>
+        
+        <!-- Кнопка переключения темы -->
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+            <svg class="theme-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="sun-icon" d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="sun-ray" d="M12 1V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="sun-ray" d="M12 21V23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="sun-ray" d="M4.22 4.22L5.64 5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="sun-ray" d="M18.36 18.36L19.78 19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="sun-ray" d="M1 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="sun-ray" d="M21 12H23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="sun-ray" d="M4.22 19.78L5.64 18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="sun-ray" d="M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="moon-icon" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"/>
+            </svg>
+        </button>
+        
+        <!-- Переключатель языка -->
+        <select id="languageSelector" aria-label="Select language">
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+        </select>
+        
+        <!-- Для авторизованных пользователей -->
+        <div id="authenticatedUser" style="display: none;">
+            <span class="head-right-span"><a href="#" id="cartLink">Cart</a></span>
+            <span class="head-right-span"><a href="profile.html" id="profileLink">Profile</a></span>
+            <span class="head-right-span"><a href="#" id="logoutLink">Logout</a></span>
+        </div>
+        
+        
+        
+        <!-- Для неавторизованных пользователей -->
+        <div id="unauthenticatedUser">
+            <span class="head-right-span" id="signInLink"><a href="login.html">Sign in</a></span>
+            <button class="purple-button" id="signUpBtn">Sign up</button>
+        </div>
+    </div>
+</header>
+
+<main class="about-main">
+    <div class="about-container">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <h1 data-translate="about_title">About Tripma</h1>
+            <p class="about-subtitle" data-translate="about_subtitle">Your trusted travel companion</p>
+            <p class="about-description" data-translate="about_description">We are passionate about making travel accessible, affordable, and unforgettable for everyone.</p>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="about-mission">
+            <div class="mission-content">
+                <h2 data-translate="our_mission">Our Mission</h2>
+                <p data-translate="mission_text">To connect people with amazing destinations around the world through innovative technology and exceptional service.</p>
+            </div>
+            <div class="mission-image">
+                <img src="img/worldMap.png" alt="World Map" class="world-map">
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="about-values">
+            <h2 data-translate="our_values">Our Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">⭐</div>
+                    <h3 data-translate="value_1_title">Quality</h3>
+                    <p data-translate="value_1_text">We provide only the best travel experiences and accommodations.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💰</div>
+                    <h3 data-translate="value_2_title">Affordability</h3>
+                    <p data-translate="value_2_text">Making travel accessible to everyone with competitive prices.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🛡️</div>
+                    <h3 data-translate="value_3_title">Reliability</h3>
+                    <p data-translate="value_3_text">You can count on us for safe and secure travel arrangements.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="about-team">
+            <h2>Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="img/Anthony-avatar.png" alt="Anthony" class="member-photo">
+                    <h3>Anthony</h3>
+                    <p>CEO & Founder</p>
+                    <p>Passionate about connecting people with the world's most beautiful destinations.</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/Chen-avatar.png" alt="Chen" class="member-photo">
+                    <h3>Chen</h3>
+                    <p>CTO</p>
+                    <p>Leading our technology initiatives to make travel planning seamless and intuitive.</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/Kaori-avatar.png" alt="Kaori" class="member-photo">
+                    <h3>Kaori</h3>
+                    <p>Head of Customer Experience</p>
+                    <p>Ensuring every customer has an exceptional journey from planning to return.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="about-contact">
+            <h2 data-translate="contact_us">Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>📧 Email:</strong>
+                    <span data-translate="email_contact">Email: info@tripma.com</span>
+                </div>
+                <div class="contact-item">
+                    <strong>📞 Phone:</strong>
+                    <span data-translate="phone_contact">Phone: +1 (555) 123-4567</span>
+                </div>
+                <div class="contact-item">
+                    <strong>📍 Address:</strong>
+                    <span>123 Travel Street, Adventure City, AC 12345</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Map Section -->
+        <section class="about-map">
+            <h2 data-translate="contact_us">Contact Us</h2>
+            <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <iframe
+                    title="Tripma Office Map"
+                    width="100%"
+                    height="400"
+                    style="border:0;"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps?q=123%20Travel%20Street%2C%20Adventure%20City&output=embed">
+                </iframe>
+            </div>
+        </section>
+    </div>
+</main>
+
+ <footer class="footer-container">
+    <div class="footer-content">
+        <div class="social-icons">
+            <img src="img/twitter.png" alt="Twitter">
+            <img src="img/instagram.png" alt="Instagram">
+            <img src="img/facebook.png" alt="Facebook">
+        </div>
+        <span class="footer-span">© 2020 Tripma incorporated</span>
+    </div>
+</footer>
+</body>
+</html>

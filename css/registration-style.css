@@ -1,0 +1,208 @@
+ :root {
+            --black: #2F4449;
+            --accent-dark: #2A7D8C;
+            --white: #FFFFFF;
+            --error: #E74C3C;
+            --success: #2ECC71;
+            --gray: #ECF0F1;
+            --border-gradient: linear-gradient(45deg, #2A7D8C, #1E5F6B);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        body {
+            background-color: var(--gray);
+            color: var(--black);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0;
+            padding: 30px;
+            background-color: var(--white);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            position: relative;
+            border: 3px solid transparent;
+            background-clip: padding-box;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            right: -6px;
+            bottom: -6px;
+            background: var(--border-gradient);
+            z-index: -1;
+            border-radius: 13px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--accent-dark);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        label.required::after {
+            content: " *";
+            color: var(--error);
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+
+        input:focus, select:focus {
+            border-color: var(--accent-dark);
+            outline: none;
+        }
+
+        input.error {
+            border-color: var(--error);
+        }
+
+        input.success {
+            border-color: var(--success);
+        }
+
+        .error-message {
+            color: var(--error);
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .password-options {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .password-options input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .password-options label {
+            margin-right: 20px;
+            margin-bottom: 0;
+            font-weight: normal;
+        }
+
+        .password-strength {
+            height: 5px;
+            background-color: #ddd;
+            margin-top: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .strength-bar {
+            height: 100%;
+            width: 0;
+            transition: width 0.3s, background-color 0.3s;
+        }
+
+        .nickname-generator {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nickname-generator input {
+            flex-grow: 1;
+        }
+
+        .nickname-generator button {
+            padding: 12px 15px;
+            background-color: var(--accent-dark);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .nickname-generator button:hover {
+            background-color: #1E5F6B;
+        }
+
+        .agreement {
+            margin: 30px 0;
+        }
+
+        .agreement input {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .agreement label {
+            display: inline;
+            font-weight: normal;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--accent-dark);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .submit-btn.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .submit-btn:hover {
+            background-color: #1E5F6B;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+            
+            .nickname-generator {
+                flex-direction: column;
+            }
+        }
