@@ -4,12 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
- <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/preloader.js" defer></script>
     <script src="js/swiper.js" defer></script>
     <script src="js/main.js" defer></script>
@@ -21,232 +17,234 @@
     <script src="js/accessibility.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <div class="preloader">
         <div class="progress-container">
             <div class="progress-bar" id="progressBar"></div>
         </div>
         <div class="progress-text" id="progressText">0%</div>
     </div>
+    
     <header class="head">
-    <div class="head-left">
-        <img class="logo" src="img/Wordmark.png" alt="Tripma Logo">
-    </div>    
-    <button id="burgerBtn" class="burger-menu" aria-label="Open menu">
-        <span class="burger-line"></span>
-        <span class="burger-line"></span>
-        <span class="burger-line"></span>
-    </button>
-    <div class="head-right" id="mobileMenu">
-        <span class="head-right-span"><a href="index.html">Main</a></span>
-        <span class="head-right-span"><a href="about.html">About us</a></span>
-        <span class="head-right-span"><a href="catalog.html">Flights</a></span>
-        
-        
-        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
-            <svg class="theme-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="sun-icon" d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path class="sun-ray" d="M12 1V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path class="sun-ray" d="M12 21V23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path class="sun-ray" d="M4.22 4.22L5.64 5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path class="sun-ray" d="M18.36 18.36L19.78 19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path class="sun-ray" d="M1 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path class="sun-ray" d="M21 12H23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path class="sun-ray" d="M4.22 19.78L5.64 18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path class="sun-ray" d="M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path class="moon-icon" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"/>
-            </svg>
+        <div class="head-left">
+            <img class="logo" src="img/Wordmark.png" alt="Tripma Logo">
+        </div>    
+        <button id="burgerBtn" class="burger-menu" aria-label="Open menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
         </button>
-        
-        <select id="languageSelector" aria-label="Select language">
-            <option value="en">EN</option>
-            <option value="ru">RU</option>
-        </select>
-        
-        <!-- Для авторизованных пользователей -->
-        <div id="authenticatedUser" style="display: none;">
-            <span class="head-right-span"><a href="cart.html" id="cartLink">Cart</a></span>
-            <span class="head-right-span"><a href="profile.html" id="profileLink">Profile</a></span>
-            <span class="head-right-span"><a href="#" id="logoutLink">Logout</a></span>
-        </div>
-        
-        <!-- Кнопка админ-панели (только для администраторов) -->
-        <div id="adminPanel" style="display: none;">
-            <span class="head-right-span"><a href="admin.html" id="adminLink">Admin Panel</a></span>
-        </div>
+        <div class="head-right" id="mobileMenu">
+            <span class="head-right-span"><a href="index.html" data-translate="main">Main</a></span>
+            <span class="head-right-span"><a href="about.html" data-translate="about_us">About us</a></span>
+            <span class="head-right-span"><a href="catalog.html" data-translate="flights">Flights</a></span>
+            
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                <svg class="theme-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="sun-icon" d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M12 1V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M12 21V23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M4.22 4.22L5.64 5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M18.36 18.36L19.78 19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M1 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M21 12H23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M4.22 19.78L5.64 18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="sun-ray" d="M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="moon-icon" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"/>
+                </svg>
+            </button>
+            
+            <select id="languageSelector" aria-label="Select language">
+                <option value="en">EN</option>
+                <option value="ru">RU</option>
+            </select>
+            
+            <!-- Для авторизованных пользователей -->
+            <div id="authenticatedUser" style="display: none;">
+                <span class="head-right-span"><a href="cart.html" id="cartLink" data-translate="cart">Cart</a></span>
+                <span class="head-right-span"><a href="profile.html" id="profileLink" data-translate="profile">Profile</a></span>
+                <span class="head-right-span"><a href="#" id="logoutLink" data-translate="logout">Logout</a></span>
+            </div>
+            
+            <!-- Кнопка админ-панели (только для администраторов) -->
+            <div id="adminPanel" style="display: none;">
+                <span class="head-right-span"><a href="admin.html" id="adminLink">Admin Panel</a></span>
+            </div>
 
-        <!-- Для неавторизованных пользователей -->
-        <div id="unauthenticatedUser">
-            <span class="head-right-span" id="signInLink"><a href="login.html">Sign in</a></span>
-            <button class="purple-button" id="signUpBtn">Sign up</button>
+            <!-- Для неавторизованных пользователей -->
+            <div id="unauthenticatedUser">
+                <span class="head-right-span" id="signInLink"><a href="login.html" data-translate="sign_in">Sign in</a></span>
+                <button class="purple-button" id="signUpBtn" data-translate="sign_up">Sign up</button>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
+    
     <main>
-        <section class ="preview">
-          <img class="preview-logo" src="img/Hero Text Gradient.png" alt="">
+        <section class="preview">
+         <div class="Preview-text" style="font-family: 'Nunito Sans', sans-serif; font-weight: 800; font-size: 96px; text-align: center; color: #7546D7;">
+    <span data-translate="preview_line1">It's more than</span><br>
+    <span data-translate="preview_line2">just a trip</span>
+</div>
+          
             <div class="preview-searchBar">
-                <input class="preview-input" list="cities" name="city" placeholder="From where?">
+                <input class="preview-input" list="cities" name="city" placeholder="From where?" data-translate-placeholder="from_where">
                 <datalist id="cities">
-                  <option value="SFO">
-                  <option value="NRT">
-                  <option value="ATL">
-                <option value="LAX"></option>
-                <option value="STL"></option>
-                <option value="PVG"></option>
-                <option value="MSP"></option>
+                    <option value="SFO">
+                    <option value="NRT">
+                    <option value="ATL">
+                    <option value="LAX">
+                    <option value="STL">
+                    <option value="PVG">
+                    <option value="MSP">
                 </datalist>
-                <input class="preview-input" list="cities" name=" city " placeholder="Where to?"> </input>
-                <input class="preview-input" type="date" id="datePicker" placeholder="Depart">
-                <input class="preview-input" type="date" id="datePicker" placeholder="Return">
+                <input class="preview-input" list="cities" name="city" placeholder="Where to?" data-translate-placeholder="where_to">
+                <input class="preview-input" type="date" id="datePicker" placeholder="Depart" data-translate-placeholder="depart">
+                <input class="preview-input" type="date" id="datePicker" placeholder="Return" data-translate-placeholder="return">
+                
                 <button id="passengerDropdownBtn" class="preview-searchBar-passengers dropbtn">
-                    1 Adult
+                    1 <span data-translate="adults">Adult</span>
                 </button>
                 
-                
-                
-                  <div id="passengerDropdown" class="dropdown-content" style="display: none;">
+                <div id="passengerDropdown" class="dropdown-content" style="display: none;">
                     <div class="number-control">
-                      <button class="minus-btn" data-type="adults">-</button>
-                      <span id="adults-count">1</span>
-                      <button class="plus-btn" data-type="adults">+</button>
-                      <span>Adults</span>
+                        <button class="minus-btn" data-type="adults">-</button>
+                        <span id="adults-count">1</span>
+                        <button class="plus-btn" data-type="adults">+</button>
+                        <span data-translate="adults">Adults</span>
                     </div>
                     <div class="number-control">
-                      <button class="minus-btn" data-type="minors">-</button>
-                      <span id="minors-count">0</span>
-                      <button class="plus-btn" data-type="minors">+</button>
-                      <span>Minors</span>
-                    </div>
-                  </div>
-                    <button class="purple-button-preview">Search</Search></button>
-                      </div>
-                </section>
-                <div class="separator">
-
-                </div>  
-                <section class="flight-deals">
-                    <div class="flight-deals-container">
-                        <div class="deals-header">
-                            <span class="deals-header-text">Find your next adventure with these  <a class="new-page" href="">flight deals</a></span>
-                            <span><a class="all" href="">all&#8594;</a></span>
-                        </div>
-                        
-                        <div class="deals-grid">
-                            <div class="deal-card">
-                                <div class="deal-card-image" style="background-image:url(img/shanghai-image.jpeg)"></div>
-                                <div class="deal-content">
-                                    <h2 class="deal-location">The Bund, Shanghai</h2>
-                                    <p class="deal-description">China's most international city</p>
-                                    <div class="deal-price">$598</div>
-                                </div>
-                            </div>
-                            
-                            <div class="deal-card">
-                                <div class="deal-card-image" style="background-image:url(img/sydney-image.png)"></div>
-                                <div class="deal-content">
-                                    <h2 class="deal-location">Sydney Opera House, Sydney</h2>
-                                    <p class="deal-description">Take a stroll along the famous harbor</p>
-                                    <div class="deal-price">$981</div>
-                                </div>
-                            </div>
-                            
-                            <div class="deal-card">
-                                <div class="deal-card-image" style="background-image:url(img/Kyoto-image.png)"></div>
-                                <div class="deal-content">
-                                    <h2 class="deal-location">Kōdajji Temple, Kyoto</h2>
-                                    <p class="deal-description">Step back in time in the Gion district</p>
-                                    <div class="deal-price">$633</div>
-                                </div>
-                            </div>
-                            
-                            <div class="deal-card">
-                                <div class="deal-card-image" style="background-image: url(img/Kenya-image.png);"></div>
-                                <div class="deal-content">
-                                    <h2 class="deal-location">Tsavo East National Park, Kenya</h2>
-                                    <p class="deal-description">Named after the Tsavo River, and opened in April 1984, Tsavo East National Park is one of the oldest parks in Kenya. It is located in the semi-arid Taru Desert.</p>
-                                    <div class="deal-price">$1,248</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>      
-                </section>
-                <div class="divider"></div>
-
-
-
-<div class="swiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="img/slider1.jpg" alt="Slide 1"></div>
-    <div class="swiper-slide"><img src="img/slider2.jpg" alt="Slide 2"></div>
-  </div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-pagination"></div>
-</div>
-
-
-</div>
-
-             <section class="Reviews">
-
-                <div class="Reviews-head"> <h3> What Tripma users are saying</h3></div>
-                <div class="divider"></div>
-                <div class="revs">
-                    <div class="Reviews-review">
-                        <img src="img/Chen-avatar.png" alt="Yifei Chen" class="Review-avatar">
-                        <div class="Review-author-info">
-                            <div class="Review-author">Yifei Chen</div>
-                            <div class="Review-date">Seoul, South Korea | April 2019</div>
-                        
-                        <div class="testimonial-content">
-                            What a great experience using Tripma! I booked all of my flights for my gap year through Tripma and never had any issues. When I had to cancel a flight because of an emergency, Tripma support helped me <a href="#" class="read-more">read more...</a>
-                        </div>
+                        <button class="minus-btn" data-type="minors">-</button>
+                        <span id="minors-count">0</span>
+                        <button class="plus-btn" data-type="minors">+</button>
+                        <span data-translate="minors">Minors</span>
                     </div>
                 </div>
+                
+                <button class="purple-button-preview" data-translate="search">Search</button>
+            </div>
+        </section>
+        
+        <div class="separator"></div>  
+        
+        <section class="flight-deals">
+            <div class="flight-deals-container">
+                <div class="deals-header">
+                    <span class="deals-header-text">
+                        <span data-translate="find_adventure">Find your next adventure with these</span> 
+                        <a class="new-page" href="" data-translate="flight_deals">flight deals</a>
+                    </span>
+                    <span><a class="all" href="" data-translate="all">all→</a></span>
+                </div>
+                
+                <div class="deals-grid">
+                    <!-- Карточки остаются без изменений, так как они статичны -->
+                    <div class="deal-card">
+                        <div class="deal-card-image" style="background-image:url(img/shanghai-image.jpeg)"></div>
+                        <div class="deal-content">
+                            <h2 class="deal-location">The Bund, Shanghai</h2>
+                            <p class="deal-description">China's most international city</p>
+                            <div class="deal-price">$598</div>
+                        </div>
+                    </div>
                     
-                    <div class="Reviews-review">
-                        <img src="img/Kaori-avatar.png" alt="Kaori Yamaguchi" class="Review-avatar">
-                        <div class="Review-author-info">
-                            <div class="Review-author">Kaori Yamaguchi</div>
-                            <div class="Review-date">Honolulu, Hawaii | February 2017</div>
-                       
-                        <div class="testimonial-content">
-                            My family and I visit Hawaii every year, and we usually book our flights using other services. Tripma was recommened to us by a long time friend, and I'm so glad we tried it out! The process was easy and <a href="#" class="read-more">read more...</a>
+                    <div class="deal-card">
+                        <div class="deal-card-image" style="background-image:url(img/sydney-image.png)"></div>
+                        <div class="deal-content">
+                            <h2 class="deal-location">Sydney Opera House, Sydney</h2>
+                            <p class="deal-description">Take a stroll along the famous harbor</p>
+                            <div class="deal-price">$981</div>
                         </div>
                     </div>
-                </div>
                     
-                    <div class="Reviews-review">
-                        <img src="img/Anthony-avatar.png" alt="Anthony Lewis" class="Review-avatar">
-                        <div class="Review-author-info">
-                            <div class="Review-author">Anthony Lewis</div>
-                            <div class="Review-date">Berlin, Germany | April 2019</div>
-                       
-                        <div class="testimonial-content">
-                            When I was looking to book my flight to Berlin from LAX, Tripma had the best browsing experiece so I figured I'd give it a try. It was my first time using Tripma, but I'd definitely recommend it to a friend and use it for <a href="#" class="read-more">read more...</a>
+                    <div class="deal-card">
+                        <div class="deal-card-image" style="background-image:url(img/Kyoto-image.png)"></div>
+                        <div class="deal-content">
+                            <h2 class="deal-location">Kōdajji Temple, Kyoto</h2>
+                            <p class="deal-description">Step back in time in the Gion district</p>
+                            <div class="deal-price">$633</div>
+                        </div>
+                    </div>
+                    
+                    <div class="deal-card">
+                        <div class="deal-card-image" style="background-image: url(img/Kenya-image.png);"></div>
+                        <div class="deal-content">
+                            <h2 class="deal-location">Tsavo East National Park, Kenya</h2>
+                            <p class="deal-description">Named after the Tsavo River, and opened in April 1984, Tsavo East National Park is one of the oldest parks in Kenya. It is located in the semi-arid Taru Desert.</p>
+                            <div class="deal-price">$1,248</div>
                         </div>
                     </div>
                 </div>
-                </div>
-             </section>
- </main>
- <hr class="line">     
- <footer class="footer-container">
-    <div class="footer-content">
-        <div class="social-icons">
-            <img src="img/twitter.png" alt="Twitter">
-            <img src="img/instagram.png" alt="Instagram">
-            <img src="img/facebook.png" alt="Facebook">
+            </div>      
+        </section>
+        
+        <div class="divider"></div>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/slider1.jpg" alt="Slide 1"></div>
+                <div class="swiper-slide"><img src="img/slider2.jpg" alt="Slide 2"></div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
         </div>
-        <span class="footer-span">© 2020 Tripma incorporated</span>
-    </div>
-</footer>
+
+        <section class="Reviews">
+            <div class="Reviews-head">
+                <h3 data-translate="reviews_title">What Tripma users are saying</h3>
+            </div>
+            <div class="divider"></div>
+            <div class="revs">
+                <div class="Reviews-review">
+                    <img src="img/Chen-avatar.png" alt="Yifei Chen" class="Review-avatar">
+                    <div class="Review-author-info">
+                        <div class="Review-author">Yifei Chen</div>
+                        <div class="Review-date">Seoul, South Korea | April 2019</div>
+                        <div class="testimonial-content">
+                            What a great experience using Tripma! I booked all of my flights for my gap year through Tripma and never had any issues. When I had to cancel a flight because of an emergency, Tripma support helped me <a href="#" class="read-more" data-translate="read_more">read more...</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="Reviews-review">
+                    <img src="img/Kaori-avatar.png" alt="Kaori Yamaguchi" class="Review-avatar">
+                    <div class="Review-author-info">
+                        <div class="Review-author">Kaori Yamaguchi</div>
+                        <div class="Review-date">Honolulu, Hawaii | February 2017</div>
+                        <div class="testimonial-content">
+                            My family and I visit Hawaii every year, and we usually book our flights using other services. Tripma was recommened to us by a long time friend, and I'm so glad we tried it out! The process was easy and <a href="#" class="read-more" data-translate="read_more">read more...</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="Reviews-review">
+                    <img src="img/Anthony-avatar.png" alt="Anthony Lewis" class="Review-avatar">
+                    <div class="Review-author-info">
+                        <div class="Review-author">Anthony Lewis</div>
+                        <div class="Review-date">Berlin, Germany | April 2019</div>
+                        <div class="testimonial-content">
+                            When I was looking to book my flight to Berlin from LAX, Tripma had the best browsing experiece so I figured I'd give it a try. It was my first time using Tripma, but I'd definitely recommend it to a friend and use it for <a href="#" class="read-more" data-translate="read_more">read more...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <hr class="line">     
+    
+    <footer class="footer-container">
+        <div class="footer-content">
+            <div class="social-icons">
+                <img src="img/twitter.png" alt="Twitter">
+                <img src="img/instagram.png" alt="Instagram">
+                <img src="img/facebook.png" alt="Facebook">
+            </div>
+            <span class="footer-span" data-translate="copyright">© 2020 Tripma incorporated</span>
+        </div>
+    </footer>
 </body>
 </html>
-                                   
