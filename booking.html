@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/trips.css">
+    <link rel="stylesheet" href="booking.css">
+    <title>Flight Booking</title>
+    <script src="js/preloader.js" defer></script>
+    <script src="js/translations.js" defer></script>
+    <script src="js/booking.js" defer></script>
+</head>
+<body>
+    <div class="preloader">
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="progress-text" id="progressText">0%</div>
+    </div>
+
+    <header class="head">
+        <div class="head-left">
+            <img class="logo" src="img/Wordmark.png" alt="">
+        </div>    
+        <button id="burgerBtn" class="burger-menu" aria-label="Open menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+        <div class="head-right" id="mobileMenu">
+            <span class="head-right-span"><a href="index.html" data-translate="main">Main</a></span>
+            <span class="head-right-span"><a href="about.html" data-translate="about_us">About us</a></span>
+            <span class="head-right-span"><a href="catalog.html" data-translate="flights">Flights</a></span>
+            <select id="languageSelector" aria-label="Select language">
+                <option value="en">EN</option>
+                <option value="ru">RU</option>
+            </select>
+            <div id="authenticatedUser" style="display: none;">
+                <span class="head-right-span"><a href="cart.html" id="cartLink" data-translate="cart">Cart</a></span>
+                <span class="head-right-span"><a href="profile.html" id="profileLink" data-translate="profile">Profile</a></span>
+                <span class="head-right-span"><a href="#" id="logoutLink" data-translate="logout">Logout</a></span>
+            </div>
+            <div id="unauthenticatedUser">
+                <span class="head-right-span" id="signInLink"><a href="login.html" data-translate="sign_in">Sign in</a></span>
+                <button class="purple-button" id="signUpBtn" data-translate="sign_up">Sign up</button>
+            </div>
+        </div>
+        <script src="js/menu.js" defer></script>
+        <script src="js/header-auth.js" defer></script>
+    </header>
+
+    <div class="booking-container" id="booking-container">
+        <!-- Здесь будет загружена форма оформления -->
+    </div>
+
+    <footer class="footer-container">
+        <div class="footer-content">
+            <div class="social-icons">
+                <img src="img/twitter.png" alt="Twitter">
+                <img src="img/instagram.png" alt="Instagram">
+                <img src="img/facebook.png" alt="Facebook">
+            </div>
+            <span class="footer-span">© 2020 Tripma incorporated</span>
+        </div>
+    </footer>
+
+</body>
+</html>
+

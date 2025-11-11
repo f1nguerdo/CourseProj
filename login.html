@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Авторизация</title>
     <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/login.js" defer></script>
     <script src="js/header-auth.js" defer></script>
     <script src="js/theme.js" defer></script>
     <script src="js/translations.js" defer></script>
-    <script src="js/accessibility.js" defer></script>
-    <script src="js/login.js" defer></script>
 </head>
 <body>
     <header class="head">
@@ -18,9 +17,13 @@
             <img class="logo" src="img/Wordmark.png" alt="">
         </div>    
         <div class="head-right">
-            <span class="head-right-span"><a href="index.html">Main</a></span>
-            <span class="head-right-span"><a href="about.html">About us</a></span>
-            <span class="head-right-span"><a href="catalog.html">Flights</a></span>
+            <span class="head-right-span"><a href="index.html" data-translate="main">Main</a></span>
+            <span class="head-right-span"><a href="about.html" data-translate="about_us">About us</a></span>
+            <span class="head-right-span"><a href="catalog.html" data-translate="flights">Flights</a></span>
+            <select id="languageSelector" aria-label="Select language">
+                <option value="en">EN</option>
+                <option value="ru">RU</option>
+            </select>
             
             <!-- Для авторизованных пользователей -->
             <div id="authenticatedUser" style="display: none;">
@@ -29,11 +32,6 @@
                 <span class="head-right-span"><a href="#" id="logoutLink">Logout</a></span>
             </div>
             
-            <select id="languageSelector" aria-label="Select language">
-                <option value="en">EN</option>
-                <option value="ru">RU</option>
-            </select>
-            
             <!-- Кнопка админ-панели (только для администраторов) -->
             <div id="adminPanel" style="display: none;">
                 <span class="head-right-span"><a href="admin.html" id="adminLink">Admin Panel</a></span>
@@ -41,8 +39,8 @@
             
             <!-- Для неавторизованных пользователей -->
             <div id="unauthenticatedUser">
-                <span class="head-right-span" id="signInLink"><a href="login.html">Sign in</a></span>
-                <button class="purple-button" id="signUpBtn">Sign up</button>
+                <span class="head-right-span" id="signInLink"><a href="login.html" data-translate="sign_in">Sign in</a></span>
+                <button class="purple-button" id="signUpBtn" data-translate="sign_up">Sign up</button>
             </div>
         </div>
     </header>
@@ -50,25 +48,25 @@
     <main>
         <section class="auth-section">
             <div>
-                <h2 data-i18n="login.form.title">Log in</h2>
+                <h2 data-translate="login_title">Log in</h2>
             </div>
             <form id="loginForm" class="auth-form">
                 <div class="input-wrapper">
                     <input class="card-input" type="text" 
-                           data-i18n="[placeholder]login.form.nickname" 
+                           data-translate-placeholder="nickname" 
                            placeholder="Nickname" 
                            id="loginInput">
                     <span class="error-message" id="login-error"></span>
                 </div>
                 <div class="input-wrapper">
                     <input class="card-input" type="password" 
-                           data-i18n="[placeholder]login.form.password" 
+                           data-translate-placeholder="password" 
                            placeholder="Password" 
                            id="passwordInput">
                     <span class="error-message" id="password-error"></span>
                 </div>
-                <button type="submit" class="check-in-button" id="submit-button" data-i18n="login.form.submit">Log in</button>
-                <h3><a href="registar.html" id="toggle-form" data-i18n="login.form.switchToRegister">Sign up</a></h3>
+                <button type="submit" class="check-in-button" id="submit-button" data-translate="login_button">Log in</button>
+                <h3><a href="registar.html" id="toggle-form" data-translate="switch_to_register">Sign up</a></h3>
             </form>
         </section>
     </main>

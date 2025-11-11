@@ -6,12 +6,11 @@
     <script src="js/preloader.js" defer></script>
     <script src="js/catalog.js" defer></script>
     <script src="js/processing.js" defer></script>
+    <script src="js/translations.js" defer></script>
     <script src="js/header-auth.js" defer></script>
     <script src="js/theme.js" defer></script>
-    <script src="js/translations.js" defer></script>
-    <script src="js/menu.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
      <link rel="stylesheet" href="css/trips.css">
     <title>Document</title>
 </head>
@@ -28,15 +27,10 @@
     <div class="head-left">
         <img class="logo" src="img/Wordmark.png" alt="Tripma Logo">
     </div>    
-    <button id="burgerBtn" class="burger-menu" aria-label="Open menu">
-        <span class="burger-line"></span>
-        <span class="burger-line"></span>
-        <span class="burger-line"></span>
-    </button>
-    <div class="head-right" id="mobileMenu">
-        <span class="head-right-span"><a href="index.html">Main</a></span>
-        <span class="head-right-span"><a href="about.html">About us</a></span>
-        <span class="head-right-span"><a href="catalog.html">Flights</a></span>
+    <div class="head-right">
+        <span class="head-right-span"><a href="index.html" data-translate="main">Main</a></span>
+        <span class="head-right-span"><a href="about.html" data-translate="about_us">About us</a></span>
+        <span class="head-right-span"><a href="catalog.html" data-translate="flights">Flights</a></span>
         
         <!-- Кнопка переключения темы -->
         <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
@@ -58,42 +52,45 @@
             <option value="en">EN</option>
             <option value="ru">RU</option>
         </select>
-        
+
         <!-- Для авторизованных пользователей -->
         <div id="authenticatedUser" style="display: none;">
-            <span class="head-right-span"><a href="#" id="cartLink">Cart</a></span>
-            <span class="head-right-span"><a href="profile.html" id="profileLink">Profile</a></span>
-            <span class="head-right-span"><a href="#" id="logoutLink">Logout</a></span>
+            <span class="head-right-span"><a href="#" id="cartLink" data-translate="cart">Cart</a></span>
+            <span class="head-right-span"><a href="profile.html" id="profileLink" data-translate="profile">Profile</a></span>
+            <span class="head-right-span"><a href="#" id="logoutLink" data-translate="logout">Logout</a></span>
         </div>
         
-        
+        <!-- Кнопка админ-панели (только для администраторов) -->
+        <div id="adminPanel" style="display: none;">
+            <span class="head-right-span"><a href="admin.html" id="adminLink" data-translate="admin_panel">Admin Panel</a></span>
+        </div>
         
         <!-- Для неавторизованных пользователей -->
         <div id="unauthenticatedUser">
-            <span class="head-right-span" id="signInLink"><a href="login.html">Sign in</a></span>
-            <button class="purple-button" id="signUpBtn">Sign up</button>
+            <span class="head-right-span" id="signInLink"><a href="login.html" data-translate="sign_in">Sign in</a></span>
+            <button class="purple-button" id="signUpBtn" data-translate="sign_up">Sign up</button>
         </div>
     </div>
 </header>
 
    <div class="controls">
     <div class="search-box">
-        <input type="text" id="search-input" placeholder="Search by place or city...">
+        <input type="text" id="search-input" placeholder="Search by place or city..." data-translate-placeholder="search_placeholder">
     </div>
     <div class="filter-control">
         <select id="price-filter">
-            <option value="all">All Prices</option>
-            <option value="0-500">$0 - $500</option>
-            <option value="500-1000">$500 - $1000</option>
-            <option value="1000+">$1000+</option>
+            <option value="all" data-translate="all_prices">All Prices</option>
+            <option value="0-500" data-translate="price_range_0_500">$0 - $500</option>
+            <option value="500-1000" data-translate="price_range_500_1000">$500 - $1000</option>
+            <option value="1000+" data-translate="price_range_1000_plus">$1000+</option>
         </select>
     </div>
     <div class="sort-control">
         <select id="sort-by">
-            <option value="id">Sort By</option>
-            <option value="price_asc">Price: Low to High</option>
-            <option value="price_desc">Price: High to Low</option>
-            <option value="place_asc">Name: A to Z</option>
+            <option value="id" data-translate="sort_by">Sort By</option>
+            <option value="price_asc" data-translate="price_low_high">Price: Low to High</option>
+            <option value="price_desc" data-translate="price_high_low">Price: High to Low</option>
+            <option value="place_asc" data-translate="name_a_z">Name: A to Z</option>
         </select>
     </div>
 </div>

@@ -30,9 +30,9 @@
         <span class="burger-line"></span>
     </button>
     <div class="head-right" id="mobileMenu">
-        <span class="head-right-span"><a href="index.html">Main</a></span>
-        <span class="head-right-span"><a href="about.html">About us</a></span>
-        <span class="head-right-span"><a href="catalog.html">Flights</a></span>
+        <span class="head-right-span"><a href="index.html" data-translate="main">Main</a></span>
+        <span class="head-right-span"><a href="about.html" data-translate="about_us">About us</a></span>
+        <span class="head-right-span"><a href="catalog.html" data-translate="flights">Flights</a></span>
         
         <!-- Кнопка переключения темы -->
         <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
@@ -58,17 +58,17 @@
         
         <!-- Для авторизованных пользователей -->
         <div id="authenticatedUser" style="display: none;">
-            <span class="head-right-span"><a href="#" id="cartLink">Cart</a></span>
-            <span class="head-right-span"><a href="profile.html" id="profileLink">Profile</a></span>
-            <span class="head-right-span"><a href="#" id="logoutLink">Logout</a></span>
+            <span class="head-right-span"><a href="#" id="cartLink" data-translate="cart">Cart</a></span>
+            <span class="head-right-span"><a href="profile.html" id="profileLink" data-translate="profile">Profile</a></span>
+            <span class="head-right-span"><a href="#" id="logoutLink" data-translate="logout">Logout</a></span>
         </div>
         
         
         
         <!-- Для неавторизованных пользователей -->
         <div id="unauthenticatedUser">
-            <span class="head-right-span" id="signInLink"><a href="login.html">Sign in</a></span>
-            <button class="purple-button" id="signUpBtn">Sign up</button>
+            <span class="head-right-span" id="signInLink"><a href="login.html" data-translate="sign_in">Sign in</a></span>
+            <button class="purple-button" id="signUpBtn" data-translate="sign_up">Sign up</button>
         </div>
     </div>
 </header>

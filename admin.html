@@ -23,9 +23,9 @@
             <span class="burger-line"></span>
         </button>
         <div class="head-right" id="mobileMenu">
-            <span class="head-right-span"><a href="index.html">Main</a></span>
-            <span class="head-right-span"><a href="about.html">About us</a></span>
-            <span class="head-right-span"><a href="catalog.html">Flights</a></span>
+            <span class="head-right-span"><a href="index.html" data-translate="main">Main</a></span>
+            <span class="head-right-span"><a href="about.html" data-translate="about_us">About us</a></span>
+            <span class="head-right-span"><a href="catalog.html" data-translate="flights">Flights</a></span>
             
             <!-- Кнопка переключения темы -->
             <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
@@ -50,117 +50,117 @@
             
             <!-- Для авторизованных пользователей -->
             <div id="authenticatedUser" style="display: none;">
-                <span class="head-right-span"><a href="#" id="cartLink">Cart</a></span>
-                <span class="head-right-span"><a href="profile.html" id="profileLink">Profile</a></span>
-                <span class="head-right-span"><a href="#" id="logoutLink">Logout</a></span>
+                <span class="head-right-span"><a href="#" id="cartLink" data-translate="cart">Cart</a></span>
+                <span class="head-right-span"><a href="profile.html" id="profileLink" data-translate="profile">Profile</a></span>
+                <span class="head-right-span"><a href="#" id="logoutLink" data-translate="logout">Logout</a></span>
             </div>
             
             
             
             <!-- Для неавторизованных пользователей -->
             <div id="unauthenticatedUser">
-                <span class="head-right-span" id="signInLink"><a href="login.html">Sign in</a></span>
-                <button class="purple-button" id="signUpBtn">Sign up</button>
+                <span class="head-right-span" id="signInLink"><a href="login.html" data-translate="sign_in">Sign in</a></span>
+                <button class="purple-button" id="signUpBtn" data-translate="sign_up">Sign up</button>
             </div>
         </div>
     </header>
 
     <main class="admin-main">
         <div class="admin-container">
-            <h1>Admin Panel - Trip Management</h1>
+            <h1 data-translate="admin_panel_title">Admin Panel - Trip Management</h1>
             
             <!-- Кнопки управления -->
             <div class="admin-controls">
-                <button id="addTripBtn" class="admin-btn add-btn">Add New Trip</button>
-                <button id="refreshBtn" class="admin-btn refresh-btn">Refresh List</button>
+                <button id="addTripBtn" class="admin-btn add-btn" data-translate="add_new_trip">Add New Trip</button>
+                <button id="refreshBtn" class="admin-btn refresh-btn" data-translate="refresh_list">Refresh List</button>
             </div>
             
             <!-- Форма добавления/редактирования путевки -->
             <div id="tripForm" class="trip-form" style="display: none;">
-                <h2 id="formTitle">Add New Trip</h2>
+                <h2 id="formTitle" data-translate="add_new_trip">Add New Trip</h2>
                 <form id="tripFormElement">
                     <input type="hidden" id="tripId" value="">
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="place">Place (English):</label>
+                            <label for="place" data-translate="place_en">Place (English):</label>
                             <input type="text" id="place" required>
                         </div>
                         <div class="form-group">
-                            <label for="place_ru">Place (Russian):</label>
+                            <label for="place_ru" data-translate="place_ru">Place (Russian):</label>
                             <input type="text" id="place_ru" required>
                         </div>
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="city">City (English):</label>
+                            <label for="city" data-translate="city_en">City (English):</label>
                             <input type="text" id="city" required>
                         </div>
                         <div class="form-group">
-                            <label for="city_ru">City (Russian):</label>
+                            <label for="city_ru" data-translate="city_ru">City (Russian):</label>
                             <input type="text" id="city_ru" required>
                         </div>
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="description">Description (English):</label>
+                            <label for="description" data-translate="description_en">Description (English):</label>
                             <textarea id="description" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="description_ru">Description (Russian):</label>
+                            <label for="description_ru" data-translate="description_ru">Description (Russian):</label>
                             <textarea id="description_ru" required></textarea>
                         </div>
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="fullDescription">Full Description (English):</label>
+                            <label for="fullDescription" data-translate="full_description_en">Full Description (English):</label>
                             <textarea id="fullDescription" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="fullDescription_ru">Full Description (Russian):</label>
+                            <label for="fullDescription_ru" data-translate="full_description_ru">Full Description (Russian):</label>
                             <textarea id="fullDescription_ru" required></textarea>
                         </div>
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="price">Price ($):</label>
+                            <label for="price" data-translate="price">Price ($):</label>
                             <input type="number" id="price" min="0" step="0.01" required>
                         </div>
                         <div class="form-group">
-                            <label for="duration">Duration (English):</label>
+                            <label for="duration" data-translate="duration_en">Duration (English):</label>
                             <input type="text" id="duration" required>
                         </div>
                         <div class="form-group">
-                            <label for="duration_ru">Duration (Russian):</label>
+                            <label for="duration_ru" data-translate="duration_ru">Duration (Russian):</label>
                             <input type="text" id="duration_ru" required>
                         </div>
                         <div class="form-group">
-                            <label for="rating">Rating:</label>
+                            <label for="rating" data-translate="rating">Rating:</label>
                             <input type="number" id="rating" min="0" max="5" step="0.1" required>
                         </div>
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="image">Image URL:</label>
+                            <label for="image" data-translate="image_url">Image URL:</label>
                             <input type="url" id="image" required>
                         </div>
                     </div>
                     
                     <div class="form-actions">
-                        <button type="submit" class="admin-btn save-btn">Save Trip</button>
-                        <button type="button" id="cancelBtn" class="admin-btn cancel-btn">Cancel</button>
+                        <button type="submit" class="admin-btn save-btn" data-translate="save_trip">Save Trip</button>
+                        <button type="button" id="cancelBtn" class="admin-btn cancel-btn" data-translate="cancel">Cancel</button>
                     </div>
                 </form>
             </div>
             
             <!-- Список путевок -->
             <div class="trips-list">
-                <h2>Existing Trips</h2>
+                <h2 data-translate="existing_trips">Existing Trips</h2>
                 <div id="tripsContainer" class="trips-container">
                     <!-- Здесь будут отображаться путевки -->
                 </div>

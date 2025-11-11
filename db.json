@@ -156,37 +156,6 @@
       ]
     },
     {
-      "id": 14,
-      "place": "Petra",
-      "place_ru": "Петра",
-      "city": "Ma'an",
-      "city_ru": "Маан",
-      "description": "Rose-red city carved into cliffs",
-      "description_ru": "Розово-красный город, высеченный в скалах",
-      "fullDescription": "Explore the ancient Nabatean city carved directly into vibrant red sandstone cliffs. Petra's most famous structure, Al-Khazneh (The Treasury), appears dramatically at the end of the Siq canyon.",
-      "fullDescription_ru": "Исследуйте древний набатейский город, высеченный прямо в ярких красных песчаных скалах. Самое известное сооружение Петры - Аль-Хазне (Сокровищница) - эффектно появляется в конце ущелья Сик.",
-      "price": 620,
-      "duration": "5 days",
-      "duration_ru": "5 дней",
-      "rating": 4.6,
-      "highlights": [
-        "Treasury viewpoint",
-        "Monastery hike",
-        "Night-time candlelit tour"
-      ],
-      "highlights_ru": [
-        "Вид на Сокровищницу",
-        "Поход к Монастырю",
-        "Ночная экскурсия при свечах"
-      ],
-      "image": "https://images.unsplash.com/photo-1516476120009-d5a6c9a26390?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      "gallery": [
-        "https://images.unsplash.com/photo-1516476120009-d5a6c9a26390",
-        "https://images.unsplash.com/photo-1553991562-9f24b119bf51",
-        "https://images.unsplash.com/photo-1584882003299-fb294e23f0d1"
-      ]
-    },
-    {
       "id": 15,
       "place": "Northern Lights",
       "place_ru": "Северное сияние",

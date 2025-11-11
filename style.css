@@ -1,8 +1,33 @@
+@font-face {
+    font-family: 'Manrope';
+    src: url('fonts/Manrope-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('fonts/PlayfairDisplay-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  
+    font-family: 'Manrope', Arial, sans-serif;
+}
+
+body, input, button, select, textarea {
+    font-family: 'Manrope', Arial, sans-serif;
+}
+
+h1, h2, h3, .deals-header-text, .Reviews-head {
+    font-family: 'Playfair Display', 'Manrope', Arial, sans-serif;
+    font-weight: 700;
 }
 
 .preloader {
@@ -53,7 +78,7 @@
     background-color: white;
     border-bottom: 1px solid #ddd;
     height: 96px ;
-    font-family: "Nunito Sans";
+    font-family: 'Manrope', Arial, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -81,7 +106,7 @@
     margin-left: 50px;
     color: var(--Grey-400, #7C8DB0);
 text-align: center;
-font-family: "Nunito Sans";
+font-family: 'Manrope', Arial, sans-serif;
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
@@ -381,11 +406,13 @@ a{
 }
 
 .deals-container {
-    display: flex;
-    flex-direction: column;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    box-sizing: border-box;
 }
 
 .deals-header {
@@ -417,7 +444,7 @@ a{
 }
 .deal-location{
     color: grey;
-font-family: "Nunito Sans";
+font-family: 'Playfair Display', 'Manrope', Arial, sans-serif;
 font-size: 18px;
 font-style: normal;
 font-weight: 600;
@@ -428,7 +455,7 @@ line-height: normal;
 .deal-price{
     color: var(--Grey-600, #6E7491);
 text-align: right;
-font-family: "Nunito Sans";
+font-family: 'Manrope', Arial, sans-serif;
 font-size: 18px;
 font-style: normal;
 font-weight: 600;
@@ -473,7 +500,7 @@ line-height: normal;
 }
 .deals-header-text{
     color: var(--Grey-600, #6E7491);
-    font-family: "Nunito Sans";
+    font-family: 'Playfair Display', 'Manrope', Arial, sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -487,7 +514,7 @@ line-height: normal;
 }
 .all{
     color: var(--Grey-600, #6E7491);
-    font-family: "Nunito Sans";
+    font-family: 'Manrope', Arial, sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -496,7 +523,7 @@ line-height: normal;
 .Reviews-head{
     text-align: center;
     color: var(--Grey-600, #6E7491);
-font-family: "Nunito Sans";
+font-family: 'Playfair Display', 'Manrope', Arial, sans-serif;
 font-size: 24px;
 font-style: normal;
 font-weight: 700;
@@ -537,7 +564,7 @@ align-self: stretch;
 .Review-author{
     color: var(--Grey-600, #6E7491);
 /* Header H4 */
-font-family: "Nunito Sans";
+font-family: 'Manrope', Arial, sans-serif;
 font-size: 18px;
 font-style: normal;
 font-weight: 600;
@@ -547,7 +574,7 @@ align-self:stretch;
 .Review-date{
     color: var(--Grey-600, #6E7491);
 /* Body Large */
-font-family: "Nunito Sans";
+font-family: 'Manrope', Arial, sans-serif;
 font-size: 18px;
 font-style: normal;
 font-weight: 400;
@@ -556,7 +583,7 @@ line-height: normal;
 .testimonial-content{
     color: var(--Grey-900, #27273F);
 /* Body Large */
-font-family: "Nunito Sans";
+font-family: 'Manrope', Arial, sans-serif;
 font-size: 18px;
 font-style: normal;
 font-weight: 400;
@@ -597,7 +624,7 @@ line-height: normal;
     white-space: nowrap; /* запрещаем перенос текста */
     color: var(--Grey-400, #7C8DB0);
     text-align: right;
-    font-family: "Nunito Sans";
+    font-family: 'Manrope', Arial, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
