@@ -19,16 +19,13 @@
             background-color: var(--gray);
             color: var(--black);
             line-height: 1.6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            padding: 0; /* убраны отступы сверху и снизу */
         }
 
         .container {
-            max-width: 1000px;
-            margin: 0;
-            padding: 30px;
+            max-width: 700px; /* основной блок тоньше */
+            margin: 0 auto; /* без вертикальных отступов */
+            padding: 20px;
             background-color: var(--white);
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             border-radius: 10px;

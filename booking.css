@@ -197,6 +197,136 @@
     box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
+/* Dark theme styles for booking page */
+.dark-theme .booking-form-container {
+    background: var(--card-bg, #3d3d3d);
+    color: var(--text-color, #ffffff);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .booking-header {
+    border-bottom-color: var(--border-color, #444);
+}
+
+.dark-theme .booking-header h1 {
+    color: var(--text-color, #ffffff);
+}
+
+.dark-theme .trip-summary h2 {
+    color: #b0b0b0;
+}
+
+.dark-theme .trip-summary .trip-price {
+    color: #8b7cf6;
+}
+
+.dark-theme .trip-summary .trip-duration {
+    color: #a0a0a0;
+}
+
+.dark-theme .form-section {
+    border-bottom-color: var(--border-color, #444);
+}
+
+.dark-theme .form-section h3 {
+    color: var(--text-color, #ffffff);
+}
+
+.dark-theme .form-group label {
+    color: #b0b0b0;
+}
+
+.dark-theme .form-group input,
+.dark-theme .form-group select,
+.dark-theme .form-group textarea {
+    background: var(--bg-color, #1a1a1a);
+    color: var(--text-color, #ffffff);
+    border-color: var(--border-color, #444);
+}
+
+.dark-theme .form-group input:focus,
+.dark-theme .form-group select:focus,
+.dark-theme .form-group textarea:focus {
+    border-color: #605DEC;
+    outline: none;
+}
+
+.dark-theme .booking-summary {
+    background: var(--bg-color, #1a1a1a);
+    border-color: var(--border-color, #444);
+}
+
+.dark-theme .summary-item {
+    color: #b0b0b0;
+}
+
+.dark-theme .summary-item.total {
+    color: var(--text-color, #ffffff);
+    border-top-color: var(--border-color, #444);
+}
+
+.dark-theme .back-btn {
+    background: var(--card-bg, #3d3d3d);
+    color: var(--text-color, #ffffff);
+    border-color: var(--border-color, #444);
+}
+
+.dark-theme .back-btn:hover {
+    background: #4d4d4d;
+}
+
+.dark-theme .book-btn {
+    background: #605DEC;
+    color: #fff;
+}
+
+.dark-theme .book-btn:hover {
+    background: #4a46d2;
+}
+
+.dark-theme .booking-confirmation {
+    background: var(--card-bg, #3d3d3d);
+    color: var(--text-color, #ffffff);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .confirmation-header {
+    border-bottom-color: var(--border-color, #444);
+}
+
+.dark-theme .confirmation-header h1 {
+    color: #10B981;
+}
+
+.dark-theme .confirmation-details {
+    color: var(--text-color, #ffffff);
+}
+
+.dark-theme .detail-item {
+    color: #b0b0b0;
+}
+
+.dark-theme .confirmation-actions {
+    border-top-color: var(--border-color, #444);
+}
+
+.dark-theme .home-btn,
+.dark-theme .catalog-btn {
+    background: var(--card-bg, #3d3d3d);
+    color: var(--text-color, #ffffff);
+    border-color: var(--border-color, #444);
+}
+
+.dark-theme .home-btn:hover,
+.dark-theme .catalog-btn:hover {
+    background: #4d4d4d;
+}
+
+.dark-theme .error-message {
+    background: var(--card-bg, #3d3d3d);
+    color: #ff6b6b;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .booking-form-container { padding: 16px; margin: 16px; }

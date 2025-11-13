@@ -101,8 +101,18 @@ line-height: normal;
     z-index: 101;
     margin-right: 24px;
 }
-.head-right.collapsed {
+.mobile-menu {
     display: none;
+    position: absolute;
+    top: 96px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 20px 24px;
+    gap: 16px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 100;
 }
 .burger-line {
     display: block;
@@ -118,7 +128,7 @@ line-height: normal;
     background-color: #333;
     transition: all 0.3s linear;
 }
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .burger-menu {
         display: flex;
     }
@@ -134,11 +144,19 @@ line-height: normal;
         padding: 20px 24px;
         gap: 15px;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transform: translateY(-100vh);
+        transition: transform 0.3s ease-in-out;
         z-index: 100;
         margin: 0;
+        visibility: hidden;
+        opacity: 0;
     }
-
-    .head-right.active { display: flex; }
+    
+    .head-right.active {
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+    }
     
     .head-right-span {
         padding: 12px 0;
@@ -206,28 +224,6 @@ line-height: normal;
     .mobile-menu.active{
         display: flex;
     }
-}
-/* Burger behavior for widths < 1100px: right-side drawer */
-@media (max-width: 1100px) {
-    .burger-menu { display: flex; }
-    .head-right { display: none; }
-    .head-right.active {
-        display: flex;
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 300px;
-        background: white;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 24px;
-        gap: 16px;
-        box-shadow: -4px 0 12px rgba(0,0,0,0.15);
-        z-index: 1000;
-        border-left: 1px solid #eee;
-    }
-    .head-right-span { width: 100%; padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
 }
 .purple-button {
     background-color: #6c5ce7;
@@ -640,7 +636,7 @@ line-height: normal;
     
 }
 /* Для мобильных устройств */
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .deals-grid {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -985,6 +981,35 @@ line-height: normal;
     
     .dark-theme .deal-card {
         background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+    }
+    
+    .dark-theme .deal-card .deal-location {
+        color: var(--text-color);
+    }
+    
+    .dark-theme .deal-card .deal-description {
+        color: #b0b0b0;
+    }
+    
+    .dark-theme .deal-card .deal-price {
+        color: #8b7cf6;
+    }
+    
+    .dark-theme .deals-grid {
+        background: transparent;
+    }
+    
+    .dark-theme .deals-header-text {
+        color: #b0b0b0;
+    }
+    
+    .dark-theme .new-page {
+        color: #8b7cf6;
+    }
+    
+    .dark-theme .all {
+        color: #b0b0b0;
     }
     
     .dark-theme .preview-input {
@@ -2184,4 +2209,50 @@ line-height: normal;
         padding: 20px;
     }
 }
+    /* Убедитесь, что эти стили есть */
+@media (max-width: 1100px) {
+    .burger-menu {
+        display: flex !important; /* Принудительно показываем бургер */
+    }
     
+    .head-right {
+        position: fixed;
+        top: 96px;
+        right: -100%; /* Скрыто за правым краем */
+        width: 300px;
+        height: calc(100vh - 96px);
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        margin: 0;
+        transition: right 0.3s ease-in-out;
+        z-index: 100;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    }
+
+    .Preview-text {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 800;
+    font-size: 96px;
+    text-align: center;
+    color: purple;
+}
+    
+    .head-right.active {
+        right: 0 !important; /* Появляется справа */
+    }
+    
+    /* Анимация бургера */
+    .burger-menu.active .burger-line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .burger-menu.active .burger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .burger-menu.active .burger-line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}

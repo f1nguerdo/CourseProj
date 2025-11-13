@@ -81,6 +81,22 @@
     background-color: #3700b3;
 }
 
+/* Make Add to Cart look identical to Book Now */
+.add-to-cart-btn {
+    background-color: #6200ee;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #3700b3;
+}
+
 .back-to-catalog {
     display: inline-block;
     margin-top: 2rem;
@@ -92,6 +108,218 @@
     text-align: center;
     padding: 2rem;
     color: #d32f2f;
+}
+
+/* Catalog page controls */
+.controls {
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 12px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.filter-control select,
+.sort-control select {
+    padding: 12px 14px;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 14px;
+}
+
+/* Catalog grid */
+.deals-container {
+    width: 100%;
+    margin: 0;
+    padding: 10px; /* отступы от краев страницы */
+    display: grid;
+    grid-template-columns: 1fr; /* одна путевка в строке */
+    gap: 10px; /* расстояние между карточками */
+    box-sizing: border-box;
+}
+
+/* Карточки растягиваются на ширину ячейки */
+.deals-container > * { width: 100%; box-sizing: border-box; }
+
+/* Pagination */
+.pagination-container {
+    max-width: 1200px;
+    margin: 10px auto 30px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 20px;
+}
+
+.pagination-container button {
+    padding: 8px 12px;
+    border: 1px solid #E5E7EB;
+    background: #F9FAFB;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.pagination-container button.active {
+    background: #605DEC;
+    color: #fff;
+    border-color: #605DEC;
+}
+
+.pagination-container button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .controls { grid-template-columns: 1fr; }
+    
+    .deals-container {
+        padding: 10px; /* сохраняем 10px на мобильных */
+        gap: 10px;
+        grid-template-columns: 1fr; /* одна колонка на мобильных */
+    }
+}
+
+/* Dark theme styles for catalog page */
+.dark-theme .controls {
+    background: transparent;
+}
+
+.dark-theme .search-box input {
+    background: var(--card-bg, #3d3d3d);
+    color: var(--text-color, #ffffff);
+    border-color: var(--border-color, #444);
+}
+
+.dark-theme .search-box input:focus {
+    border-color: #605DEC;
+    outline: none;
+}
+
+.dark-theme .search-box input::placeholder {
+    color: #888;
+}
+
+.dark-theme .filter-control select,
+.dark-theme .sort-control select {
+    background: var(--card-bg, #3d3d3d);
+    color: var(--text-color, #ffffff);
+    border-color: var(--border-color, #444);
+}
+
+.dark-theme .filter-control select:focus,
+.dark-theme .sort-control select:focus {
+    border-color: #605DEC;
+    outline: none;
+}
+
+.dark-theme .catalog-deal-card {
+    background: var(--card-bg, #3d3d3d);
+    border-color: var(--border-color, #444);
+}
+
+.dark-theme .catalog-deal-card .deal-content {
+    background: var(--card-bg, #3d3d3d);
+}
+
+.dark-theme .catalog-deal-card .deal-location {
+    color: var(--text-color, #ffffff);
+}
+
+.dark-theme .catalog-deal-card .deal-description {
+    color: #b0b0b0;
+}
+
+.dark-theme .catalog-deal-card .deal-price {
+    color: #8b7cf6;
+}
+
+.dark-theme .add-to-cart-btn {
+    background: #605DEC;
+    color: #fff;
+    border: none;
+}
+
+.dark-theme .add-to-cart-btn:hover {
+    background: #4a46d2;
+}
+
+.dark-theme .pagination-container button {
+    background: var(--card-bg, #3d3d3d);
+    color: var(--text-color, #ffffff);
+    border-color: var(--border-color, #444);
+}
+
+.dark-theme .pagination-container button:hover:not(:disabled) {
+    background: #4d4d4d;
+}
+
+.dark-theme .pagination-container button.active {
+    background: #605DEC;
+    color: #fff;
+    border-color: #605DEC;
+}
+
+.dark-theme .pagination-container button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.dark-theme .no-results {
+    color: #b0b0b0;
+}
+
+/* Dark theme for trip details page */
+.dark-theme .trip-detail-card {
+    background: transparent;
+}
+
+.dark-theme .trip-title {
+    color: var(--text-color, #ffffff);
+}
+
+.dark-theme .trip-price {
+    color: #8b7cf6;
+}
+
+.dark-theme .trip-meta {
+    color: #b0b0b0;
+}
+
+.dark-theme .trip-full-description {
+    color: #e0e0e0;
+}
+
+.dark-theme .trip-highlights h3 {
+    color: var(--text-color, #ffffff);
+}
+
+.dark-theme .trip-highlights ul li {
+    color: #e0e0e0;
+}
+
+.dark-theme .back-to-catalog {
+    color: #8b7cf6;
+}
+
+.dark-theme .back-to-catalog:hover {
+    color: #a594f0;
+}
+
+.dark-theme .error-message {
+    color: #ff6b6b;
 }
 
 /* Адаптивность */
