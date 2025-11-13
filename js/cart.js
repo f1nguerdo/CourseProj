@@ -159,23 +159,15 @@ function updateCartCount() {
 
 function orderAll() {
     const cartItems = getCartItems();
-    
     if (cartItems.length === 0) {
         alert('Your cart is empty!');
         return;
     }
-    
-    if (confirm(`Are you sure you want to order all ${cartItems.length} trips for $${getTotalAmount().toFixed(2)}?`)) {
-        // Clear the cart
-        localStorage.removeItem('cart');
-        
-        // Show success modal
-        showSuccessModal();
-        
-        // Reload cart display
-        loadCartItems();
-        updateCartCount();
-    }
+    // Go to booking page for the first item; booking page will handle confirmation
+    const firstTrip = cartItems[0];
+    const tripId = firstTrip && firstTrip.id ? firstTrip.id : '';
+    const url = tripId ? `booking.html?tripId=${encodeURIComponent(tripId)}` : 'booking.html';
+    window.location.href = url;
 }
 
 function getTotalAmount() {
@@ -183,27 +175,4 @@ function getTotalAmount() {
     return cartItems.reduce((sum, item) => sum + item.price, 0);
 }
 
-function showSuccessModal() {
-    const modal = document.getElementById('successModal');
-    if (modal) {
-        modal.style.display = 'block';
-    }
-}
-
-function closeSuccessModal() {
-    const modal = document.getElementById('successModal');
-    if (modal) {
-        modal.style.display = 'none';
-    }
-}
-
-// Close modal when clicking outside
-window.addEventListener('click', function(event) {
-    const modal = document.getElementById('successModal');
-    if (event.target === modal) {
-        closeSuccessModal();
-    }
-});
-
-// Make functions globally available for HTML onclick handlers
-window.closeSuccessModal = closeSuccessModal;
+// Success modal now handled on booking page, not here

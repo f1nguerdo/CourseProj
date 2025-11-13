@@ -20,11 +20,12 @@ const translations = {
         "adults": "Adults",
         "minors": "Minors",
         "search": "Search",
-        
+        "preview_line1": "It's more than",
+        "preview_line2": "just a trip",
         // Flight deals
         "find_adventure": "Find your next adventure with these",
         "flight_deals": "flight deals",
-        "all": "all→",
+        "all": "all",
         
         // Reviews
         "reviews_title": "What Tripma users are saying",
@@ -122,7 +123,85 @@ const translations = {
         "reset_settings": "Reset Settings",
         
         // Footer
-        "copyright": "© 2020 Tripma incorporated"
+        "copyright": "© 2020 Tripma incorporated",
+        
+        // Home - Deals titles/descriptions
+        "shanghai_title": "The Bund, Shanghai",
+        "shanghai_desc": "China's most international city",
+        "sydney_title": "Sydney Opera House, Sydney",
+        "sydney_desc": "Take a stroll along the famous harbor",
+        "kyoto_title": "Kōdajji Temple, Kyoto",
+        "kyoto_desc": "Step back in time in the Gion district",
+        "kenya_title": "Tsavo East National Park, Kenya",
+        "kenya_desc": "Named after the Tsavo River, and opened in April 1984, Tsavo East National Park is one of the oldest parks in Kenya. It is located in the semi-arid Taru Desert.",
+
+        // Home - Reviews section
+        "reviews_title": "What Tripma users are saying",
+        "review1_text": "What a great experience using Tripma! I booked all of my flights for my gap year through Tripma and never had any issues. When I had to cancel a flight because of an emergency, Tripma support helped me",
+        "review2_text": "My family and I visit Hawaii every year, and we usually book our flights using other services. Tripma was recommened to us by a long time friend, and I'm so glad we tried it out! The process was easy and",
+        "review3_text": "When I was looking to book my flight to Berlin from LAX, Tripma had the best browsing experiece so I figured I'd give it a try. It was my first time using Tripma, but I'd definitely recommend it to a friend and use it for",
+
+        // Catalog/Filters
+        "search_placeholder": "Search by place or city...",
+        "all_prices": "All Prices",
+        "price_range_0_500": "$0 - $500",
+        "price_range_500_1000": "$500 - $1000",
+        "price_range_1000_plus": "$1000+",
+        "sort_by": "Sort By",
+        "price_low_high": "Price: Low to High",
+        "price_high_low": "Price: High to Low",
+        "name_a_z": "Name: A to Z",
+
+        // Booking
+        "book_your_flight": "Book Your Flight",
+        "trip_price": "Trip Price:",
+        "taxes_fees": "Taxes & Fees:",
+        
+        "total": "Total:",
+        "passenger_information": "Passenger Information",
+        "first_name": "First Name",
+        "last_name": "Last Name",
+        "email_label": "Email",
+        "phone_label": "Phone",
+        "passport_number": "Passport Number",
+        "nationality": "Nationality",
+        "flight_preferences": "Flight Preferences",
+        "departure_date": "Departure Date",
+        "return_date": "Return Date",
+        "departure_city": "Departure City",
+        "select_departure_city": "Select departure city",
+        "seat_class": "Seat Class",
+        "select_seat_class": "Select seat class",
+        "economy": "Economy",
+        "business": "Business",
+        "first_class": "First Class",
+        "special_requests_label": "Special Requests",
+        "special_requests_placeholder": "Any special dietary requirements, accessibility needs, or other requests...",
+        "payment_information": "Payment Information",
+        "card_number": "Card Number",
+        "expiry_date": "Expiry Date",
+        "cvv": "CVV",
+        "cardholder_name": "Cardholder Name",
+        "back": "← Back",
+        "complete_booking": "Tickets",
+        "booking_confirmed": "Booking Confirmed!",
+        "booking_details": "Booking Details",
+        "passenger": "Passenger:",
+        "departure_label": "Departure:",
+        "return_label": "Return:",
+        "seat_class_label": "Seat Class:",
+        "go_home": "Go to Home",
+        "browse_more_trips": "Browse More Trips",
+        "purchase_completed": "Purchase Completed",
+        "booking_completed_message": "Your booking has been successfully completed. Thank you!",
+        "ok": "OK",
+        "error": "Error",
+        "back_to_all_trips": "← Back to all trips",
+        "trip_not_found": "Trip not found",
+        "trip_id_not_specified": "Trip ID not specified",
+        "return_after_departure_error": "Return date must be after departure date",
+        "add_to_cart": "Add to Cart",
+        "add_to_cart_success": "Added to cart"
     },
     ru: {
         // Header
@@ -134,8 +213,9 @@ const translations = {
         "logout": "Выйти",
         "sign_in": "Войти",
         "sign_up": "Впервые",
-        "admin_panel": "Панель администратора",
-        
+        "admin_panel": "Админ",
+        "preview_line1": "Это больше, чем",
+    "preview_line2": "просто поездка",
         // Preview section
         "from_where": "Откуда?",
         "where_to": "Куда?",
@@ -246,7 +326,84 @@ const translations = {
         "reset_settings": "Сбросить настройки",
         
         // Footer
-        "copyright": "© 2020 Tripma incorporated"
+        "copyright": "© 2020 Tripma incorporated",
+
+        // Home - Deals titles/descriptions
+        "shanghai_title": "Набережная Вайтань, Шанхай",
+        "shanghai_desc": "Самый международный город Китая",
+        "sydney_title": "Сиднейский оперный театр, Сидней",
+        "sydney_desc": "Прогуляйтесь по знаменитой гавани",
+        "kyoto_title": "Храм Кодайдзи, Киото",
+        "kyoto_desc": "Погрузитесь в атмосферу района Гион",
+        "kenya_title": "Национальный парк Цаво-Ист, Кения",
+        "kenya_desc": "Назван в честь реки Цаво и открыт в апреле 1984 года. Один из старейших парков Кении, расположен в полупустыне Тару.",
+
+        // Home - Reviews section
+        "reviews_title": "Что говорят пользователи Tripma",
+        "review1_text": "Отличный опыт с Tripma! Я бронировал все перелеты для своего гэп-yeар через Tripma и никогда не сталкивался с проблемами. Когда пришлось отменить рейс из-за неотложной ситуации, поддержка Tripma помогла мне",
+        "review2_text": "Мы с семьей каждый год ездим на Гавайи и обычно бронировали билеты через другие сервисы. Нам порекомендовали Tripma давние друзья, и я очень рад, что мы попробовали! Процесс был простым и",
+        "review3_text": "Когда я искал перелет в Берлин из LAX, у Tripma был лучший интерфейс, поэтому я решил попробовать. Это был мой первый опыт с Tripma, но я определенно порекомендую сервис друзьям и буду пользоваться им",
+
+        // Catalog/Filters
+        "search_placeholder": "Поиск по месту или городу...",
+        "all_prices": "Все цены",
+        "price_range_0_500": "$0 - $500",
+        "price_range_500_1000": "$500 - $1000",
+        "price_range_1000_plus": "$1000+",
+        "sort_by": "Сортировать по",
+        "price_low_high": "Цена: по возрастанию",
+        "price_high_low": "Цена: по убыванию",
+        "name_a_z": "Название: A → Z",
+
+        // Booking
+        "book_your_flight": "Забронируйте перелет",
+        "trip_price": "Стоимость путевки:",
+        "taxes_fees": "Налоги и сборы:",
+        "total": "Итого:",
+        "passenger_information": "Данные пассажира",
+        "first_name": "Имя",
+        "last_name": "Фамилия",
+        "email_label": "Email",
+        "phone_label": "Телефон",
+        "passport_number": "Номер паспорта",
+        "nationality": "Гражданство",
+        "flight_preferences": "Параметры перелета",
+        "departure_date": "Дата вылета",
+        "return_date": "Дата возвращения",
+        "departure_city": "Город вылета",
+        "select_departure_city": "Выберите город вылета",
+        "seat_class": "Класс обслуживания",
+        "select_seat_class": "Выберите класс",
+        "economy": "Эконом",
+        "business": "Бизнес",
+        "first_class": "Первый класс",
+        "special_requests_label": "Особые пожелания",
+        "special_requests_placeholder": "Диета, доступность, или другие пожелания...",
+        "payment_information": "Платёжные данные",
+        "card_number": "Номер карты",
+        "expiry_date": "Срок действия",
+        "cvv": "CVV",
+        "cardholder_name": "Имя владельца",
+        "back": "← Назад",
+        "complete_booking": "Билеты",
+        "booking_confirmed": "Бронирование подтверждено!",
+        "booking_details": "Детали бронирования",
+        "passenger": "Пассажир:",
+        "departure_label": "Вылет:",
+        "return_label": "Возврат:",
+        "seat_class_label": "Класс:",
+        "go_home": "На главную",
+        "browse_more_trips": "Смотреть ещё путёвки",
+        "purchase_completed": "Покупка завершена",
+        "booking_completed_message": "Ваше бронирование успешно завершено. Спасибо!",
+        "ok": "ОК",
+        "error": "Ошибка",
+        "back_to_all_trips": "← Назад ко всем путёвкам",
+        "trip_not_found": "Путёвка не найдена",
+        "trip_id_not_specified": "ID путёвки не указан",
+        "return_after_departure_error": "Дата возврата должна быть позже даты вылета",
+        "add_to_cart": "В корзину",
+        "add_to_cart_success": "Добавлено в корзину"
     }
 };
 
@@ -276,12 +433,22 @@ function setLanguage(language) {
     
     // Сохраняем выбор языка в localStorage
     localStorage.setItem('preferredLanguage', language);
+    
+    // Обновляем кнопку пассажиров, если она есть на странице
+    if (typeof updateMainButton === 'function') {
+        updateMainButton();
+    }
 }
 
 // Инициализация языка при загрузке страницы
 document.addEventListener('DOMContentLoaded', function() {
     const savedLanguage = localStorage.getItem('preferredLanguage') || 'en';
     setLanguage(savedLanguage);
+    // Синхронизируем выбранное значение селектора, если он присутствует
+    const languageSelector = document.getElementById('languageSelector');
+    if (languageSelector) {
+        languageSelector.value = savedLanguage;
+    }
 });
 
 // Инициализация переключателя языка безопасно (элемент может отсутствовать на странице)
@@ -290,6 +457,18 @@ document.addEventListener('DOMContentLoaded', function() {
     if (languageSelector) {
         languageSelector.addEventListener('change', function(e) {
             setLanguage(e.target.value);
+            // Отправляем кастомное событие для обновления динамического контента
+            window.dispatchEvent(new CustomEvent('languageChanged', { detail: { language: e.target.value } }));
         });
     }
 });
+
+// Утилиты экспорта для использования в других скриптах
+function getCurrentLanguage() {
+    return localStorage.getItem('preferredLanguage') || 'en';
+}
+
+// Делаем доступными глобально
+window.getTranslation = getTranslation;
+window.setLanguage = setLanguage;
+window.getCurrentLanguage = getCurrentLanguage;

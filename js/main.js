@@ -1,6 +1,19 @@
+// Глобальная функция для обновления кнопки пассажиров
+function updateMainButton() {
+  const dropdownBtn = document.getElementById('passengerDropdownBtn');
+  if (!dropdownBtn) return;
+  
+  const adults = document.getElementById('adults-count')?.textContent || '1';
+  const lang = window.getCurrentLanguage ? window.getCurrentLanguage() : 'en';
+  const label = window.getTranslation ? window.getTranslation('adults', lang) : 'Adults';
+  dropdownBtn.textContent = `${adults} ${label}`;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const dropdownBtn = document.getElementById('passengerDropdownBtn');
     const dropdown = document.getElementById('passengerDropdown');
+    
+    if (!dropdownBtn || !dropdown) return;
     
     // Обработчик для кнопки вызова dropdown
     dropdownBtn.addEventListener('click', function(e) {
@@ -32,33 +45,20 @@ document.addEventListener('DOMContentLoaded', function() {
       dropdown.style.display = 'none';
     });
     
-    function updateMainButton() {
-      const adults = document.getElementById('adults-count').textContent;
-      dropdownBtn.textContent = `${adults} Adult${adults !== '1' ? 's' : ''}`;
+    // Обновляем кнопку при загрузке
+    updateMainButton();
+    
+    // Обновляем кнопку при смене языка
+    const languageSelector = document.getElementById('languageSelector');
+    if (languageSelector) {
+      languageSelector.addEventListener('change', function() {
+        // Небольшая задержка, чтобы setLanguage успел выполниться
+        setTimeout(updateMainButton, 10);
+      });
     }
   });
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const burgerBtn = document.getElementById('burgerBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    
-    burgerBtn.addEventListener('click', function() {
-        this.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-        
-        // Блокировка прокрутки страницы
-        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-    });
-    
-    // Закрытие меню при клике на ссылку
-    document.querySelectorAll('.mobile-menu a').forEach(link => {
-        link.addEventListener('click', function() {
-            burgerBtn.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-    });
-});
+
  document.addEventListener('DOMContentLoaded', function() {
     // Находим кнопку Sign up
     const signUpBtn = document.getElementById('signUpBtn');

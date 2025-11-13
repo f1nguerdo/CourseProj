@@ -88,25 +88,35 @@ async function fetchTrips() {
 // Отрисовка карточек
 function renderTrips(trips) {
     if (!trips.length) {
-        dealsContainer.innerHTML = '<div class="no-results">No trips found</div>';
+        const lang = window.getCurrentLanguage ? window.getCurrentLanguage() : 'en';
+        const noResultsText = lang === 'ru' ? 'Путевки не найдены' : 'No trips found';
+        dealsContainer.innerHTML = `<div class="no-results">${noResultsText}</div>`;
         return;
     }
 
-     dealsContainer.innerHTML = `
+    const lang = window.getCurrentLanguage ? window.getCurrentLanguage() : 'en';
+    const t = (key) => (window.getTranslation ? window.getTranslation(key, lang) : key);
+    
+    dealsContainer.innerHTML = `
         <div class="deals-grid">
-            ${trips.map(trip => `
+            ${trips.map(trip => {
+                const place = lang === 'ru' && trip.place_ru ? trip.place_ru : trip.place;
+                const city = lang === 'ru' && trip.city_ru ? trip.city_ru : trip.city;
+                const description = lang === 'ru' && trip.description_ru ? trip.description_ru : trip.description;
+                return `
                 <div class="catalog-deal-card" data-trip-id="${trip.id}">
                     <div class="deal-card-image" style="background-image:url(${trip.image})">
                         <span class="image-error-text" style="display:none">Image not available</span>
                     </div>
                     <div class="deal-content">
-                        <h2 class="deal-location">${trip.place}, ${trip.city}</h2>
-                        <p class="deal-description">${trip.description}</p>
+                        <h2 class="deal-location">${place}, ${city}</h2>
+                        <p class="deal-description">${description}</p>
                         <div class="deal-price">$${trip.price}</div>
-                        <button class="add-to-cart-btn" data-trip-id="${trip.id}">Add to Cart</button>
+                        <button class="add-to-cart-btn" data-trip-id="${trip.id}">${t('add_to_cart')}</button>
                     </div>
                 </div>
-            `).join('')}
+            `;
+            }).join('')}
         </div>
     `;
 
@@ -206,12 +216,16 @@ function updateCartCount() {
 }
 
 function showAddToCartNotification(tripName) {
+    const lang = window.getCurrentLanguage ? window.getCurrentLanguage() : 'en';
+    const t = (key) => (window.getTranslation ? window.getTranslation(key, lang) : key);
+    const successText = t('add_to_cart_success');
+    
     // Создаем уведомление
     const notification = document.createElement('div');
     notification.className = 'add-to-cart-notification';
     notification.innerHTML = `
         <div class="notification-content">
-            <span>✅ Added "${tripName}" to cart!</span>
+            <span>✅ ${successText}</span>
         </div>
     `;
     
@@ -356,4 +370,23 @@ priceFilter.addEventListener('change', () => {
 sortBy.addEventListener('change', () => {
     currentPage = 1;
     fetchTrips();
+});
+
+// Обновление при смене языка
+document.addEventListener('DOMContentLoaded', () => {
+    const languageSelector = document.getElementById('languageSelector');
+    if (languageSelector) {
+        // Добавляем обработчик для перерисовки карточек
+        languageSelector.addEventListener('change', () => {
+            // Небольшая задержка, чтобы setLanguage успел выполниться
+            setTimeout(() => {
+                fetchTrips();
+            }, 50);
+        });
+    }
+    
+    // Также слушаем кастомное событие смены языка, если оно есть
+    window.addEventListener('languageChanged', () => {
+        fetchTrips();
+    });
 });

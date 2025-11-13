@@ -10,7 +10,7 @@
     <script src="js/header-auth.js" defer></script>
     <script src="js/theme.js" defer></script>
     <script src="js/translations.js" defer></script>
-    <script src="js/accessibility.js" defer></script>
+    <script src="js/menu.js" defer></script>
     <script src="js/trip-details.js" defer></script>
 </head>
 <body>
@@ -25,13 +25,17 @@
     <header class="head">
         <div class="head-left">
             <img class="logo" src="img/Wordmark.png" alt="Tripma Logo">
-        </div>    
-        <div class="head-right">
+        </div>
+        <button id="burgerBtn" class="burger-menu" aria-label="Open menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+        <div class="head-right" id="mobileMenu">
             <span class="head-right-span"><a href="index.html" data-translate="main">Main</a></span>
             <span class="head-right-span"><a href="about.html" data-translate="about_us">About us</a></span>
             <span class="head-right-span"><a href="catalog.html" data-translate="flights">Flights</a></span>
             
-            <!-- Кнопка переключения темы -->
             <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
                 <svg class="theme-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="sun-icon" d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -47,24 +51,21 @@
                 </svg>
             </button>
             
-            <!-- Для авторизованных пользователей -->
-            <div id="authenticatedUser" style="display: none;">
-                <span class="head-right-span"><a href="#" id="cartLink" data-translate="cart">Cart</a></span>
-                <span class="head-right-span"><a href="profile.html" id="profileLink" data-translate="profile">Profile</a></span>
-                <span class="head-right-span"><a href="#" id="logoutLink" data-translate="logout">Logout</a></span>
-            </div>
-            
             <select id="languageSelector" aria-label="Select language">
                 <option value="en">EN</option>
                 <option value="ru">RU</option>
             </select>
             
-            <!-- Кнопка админ-панели (только для администраторов) -->
+            <div id="authenticatedUser" style="display: none;">
+                <span class="head-right-span"><a href="cart.html" id="cartLink" data-translate="cart">Cart</a></span>
+                <span class="head-right-span"><a href="profile.html" id="profileLink" data-translate="profile">Profile</a></span>
+                <span class="head-right-span"><a href="#" id="logoutLink" data-translate="logout">Logout</a></span>
+            </div>
+            
             <div id="adminPanel" style="display: none;">
                 <span class="head-right-span"><a href="admin.html" id="adminLink" data-translate="admin_panel">Admin Panel</a></span>
             </div>
             
-            <!-- Для неавторизованных пользователей -->
             <div id="unauthenticatedUser">
                 <span class="head-right-span" id="signInLink"><a href="login.html" data-translate="sign_in">Sign in</a></span>
                 <button class="purple-button" id="signUpBtn" data-translate="sign_up">Sign up</button>

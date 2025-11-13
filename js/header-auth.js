@@ -29,6 +29,12 @@ function updateHeaderInterface() {
             unauthenticatedUser.style.display = 'none';
         }
         
+        // Обновляем ссылку корзины на всех страницах
+        const cartLinkEl = document.getElementById('cartLink');
+        if (cartLinkEl) {
+            cartLinkEl.setAttribute('href', 'cart.html');
+        }
+
         // Показываем кнопку админ-панели только для администраторов
         if (currentUser.role === 'admin' && adminPanel) {
             adminPanel.style.display = 'block';

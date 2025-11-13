@@ -13,6 +13,7 @@ async function renderTripCards(page = 1, perPage = 10) {
     const trips = allTrips.slice(startIndex, endIndex);
 
     // Рендерим карточки для текущей страницы
+    const lang = window.getCurrentLanguage ? window.getCurrentLanguage() : 'en';
     trips.forEach(trip => {
       const card = document.createElement('div');
       card.className = 'deal-card';
@@ -20,8 +21,8 @@ async function renderTripCards(page = 1, perPage = 10) {
       card.innerHTML = `
         <div class="deal-card-image" style="background-image:url(${trip.image})"></div>
         <div class="deal-content">
-          <h2 class="deal-location">${trip.place}, ${trip.city}</h2>
-          <p class="deal-description">${trip.description}</p>
+          <h2 class="deal-location">${lang === 'ru' && trip.place_ru ? trip.place_ru : trip.place}, ${lang === 'ru' && trip.city_ru ? trip.city_ru : trip.city}</h2>
+          <p class="deal-description">${lang === 'ru' && trip.description_ru ? trip.description_ru : trip.description}</p>
           <div class="deal-price">$${trip.price}</div>
         </div>
       `;
@@ -75,3 +76,26 @@ function renderPagination(totalItems, currentPage, perPage) {
 }
 
 document.addEventListener('DOMContentLoaded', () => renderTripCards(1, 10));
+
+// Обновление при смене языка
+document.addEventListener('DOMContentLoaded', () => {
+    const languageSelector = document.getElementById('languageSelector');
+    if (languageSelector) {
+        languageSelector.addEventListener('change', () => {
+            // Небольшая задержка, чтобы setLanguage успел выполниться
+            setTimeout(() => {
+                // Получаем текущую страницу из пагинации
+                const activePageBtn = document.querySelector('.pagination-container button.active');
+                const currentPage = activePageBtn ? parseInt(activePageBtn.textContent) || 1 : 1;
+                renderTripCards(currentPage, 10);
+            }, 50);
+        });
+    }
+    
+    // Также слушаем кастомное событие смены языка, если оно есть
+    window.addEventListener('languageChanged', () => {
+        const activePageBtn = document.querySelector('.pagination-container button.active');
+        const currentPage = activePageBtn ? parseInt(activePageBtn.textContent) || 1 : 1;
+        renderTripCards(currentPage, 10);
+    });
+});
